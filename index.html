@@ -2,244 +2,31 @@
 <head>
 	<title>学习单词</title>
 	<style>
+		body {
+			font-size: 15px;
+		}
+		
 		input.answer {
 			border: none;
 			border-bottom: solid 1px;
+			width: 110px;
 		}
 	</style>
 </head>
 <body>
-<script>
-	var words = {
-	"arm":"胳膊",
-	"black":"黑色的",
-	"blue":"蓝色的",
-	"brown":"棕色的",
-	"bag":"包",
-	"bear":"熊",
-	"bird":"鸟",
-	"body":"身体",
-	"book":"书",
-	"box":"盒子",
-	"bread":"面包",
-	"cat":"猫",
-	"crayon":"蜡笔",
-
-	"dog":"狗",
-	"duck":"鸭子",
-	"ear":"耳朵",
-	"elephant":"大象",
-	"eraser":"橡皮",
-	"egg":"蛋",
-	"face":"脸",
-	"foot":"脚",
-	"funny":"滑稽的，可笑的",
-	"green":"绿色的",
-	"hand":"手",
-	"head":"头",
-	"juice":"果汁",
-	"leg":"腿",
-	"monkey":"猴子",
-	"mouth":"嘴巴",
-	"mum":"妈妈",
-	"milk":"牛奶",
-	"nose":"鼻子",
-	"orange":"桔子，橙色的",
-	"panda":"熊猫",
-	"pencil":"铅笔",
-	"pig":"猪",
-	"plate":"盘子",
-	"pink":"粉色的",
-	"ruler":"尺子",
-	"school":"学校",
-	"tiger":"老虎",
-	"white":"白色的",
-	"yellow":"黄色的",
-	"your":"你的，你们的",
-	"zoo":"动物园",
-	"one":"一",
-	"two":"二",
-	"three":"三",
-	"four":"四",
-	"five":"五",
-	"six":"六",
-	"seven":"七",
-	"eight":"八",
-	"nine":"九",
-	"ten":"十",
-	"eleven":"十一",
-	"twelve":"十二",
-	"thirteen":"十三",
-	"fourteen":"十四",
-	"fifteen":"十五",
-	"eighteen":"十八",
-	"twenty":"二十",
-	"thirty":"三十",
-	"forty":"四十",
-	"one hundred":"一百",
-	"four hundred":"四百",
-	"today":"今天",
-	"tomorrow":"明天",
-	"yesterday":"昨天",
-	"the day before Yesterday":"前天",
-	"the day after tomorrow":"后天",
-	"day":"白天",
-	"morning":"早晨，上午",
-	"noon":"中午",
-	"afternoon":"下午",
-	"evening":"傍晚",
-	"night":"晚上",
-	"mid-night":"半夜",
-	"bed":"床",
-	"go to bed":"上床睡觉",
-	"wall":"墙",
-	"floor":"地板",
-	"chair":"椅子",
-	"desk":"桌子",
-	"light":"灯，光线",
-	"cup":"杯子",
-	"bowl":"碗",
-	"tV":"电视机（简写）",
-	"television":"电视机",
-	"bike":"自行车（简写）",
-	"bicycle":"自行车",
-	"please":"请",
-	"son":"儿子",
-	"daughter":"女儿",
-	"sun":"太阳",
-	"moon":"月亮",
-	"star":"星星",
-	"You are my son":"你是我的儿子",
-	"I am your son":"我是你的儿子",
-	"moon walk":"月球漫步，太空舞步",
-	"run":"奔跑",
-	"walk":"走路，散步",
-	"jump":"跳跃",
-	"We go for a walk":"我们去散步",
-	"We walk back to home":"我们走回家",
-	"hard":"难的，困难的",
-	"easy":"容易的",
-	"so":"太，非常",
-	"It is so easy!":"这太容易了",
-	"It is so hard!":"这太难了",
-	"congratulations":"恭喜",
-	"father":"爸爸",
-	"mother":"妈妈",
-	"brother":"兄，弟",
-	"sister":"姐，妹",
-	"grandma":"奶奶",
-	"grandpa":"爷爷",
-	"grandmother":"奶奶",
-	"grandfather":"爷爷",
-	"right":"右边",
-	"left":"左边",
-	"front":"前面",
-	"back":"后面",
-	"bad":"坏的",
-
-	"week 1":"第一周",
-	"big":"大的",
-	"small":"小的",
-	"drink":"喝，饮",
-	"eat":"吃",
-	"smell":"闻",
-	"listen":"听",
-	"kitchen":"厨房",
-
-	"week 2":"第二周",
-	"tree":"树",
-	"grass":"草",
-	"leaf":"树叶",
-	"garden":"花园",
-	"ant":"蚂蚁",
-	"see":"看见",
-	"look":"看，注视",
-	"look at the tree":"看着那个棵树",
-	"some":"一些",
-	"all":"全部，所有",
-	"lots of":"非常多的",
-
-	"week 3":"第三周",
-	"love":"爱",
-	"toy":"玩具",
-	"gift":"礼物",
-	"teacher":"老师",
-	"student":"学生",
-	"old":"年老的，旧的",
-	"young":"年轻的",
-	"poor":"穷的，可怜的",
-	"rich":"富有的",
-	"good":"好的",
-	"better":"更好的",
-	"best":"最好的",
-	"very":"非常",
-	"much":"许多的",
-	"make":"制造，做，组装"
-	};
-
 	
-
-	// how many words need to be test
-	</script>
-	
-	恭喜你，你已经学习了<span id=total></span>个单词！
+	<h3>恭喜你，你已经学习了<span id=total></span>个单词！</h3>
 	<div id=options>
-		<input type="button" onclick="showall()" value="显示所有单词">，或
-		听写<input id="count" value=20 size=3>个单词<input type="button" value="开始听写" onclick="exam()">
+		<input type="button" onclick="showall()" value="显示所有单词"><br>
+		<span class="label">或听写</span>
+		<input id="count" value=20 size=3><span class="label">个单词</span>
+		<input type="button" value="开始听写" onclick="exam()">
 	</div>
 
 	<div id=container></div>
 	
-	<script>
-		var wordcount = Object.keys(words).length; 
-		document.getElementById("total").innerText = wordcount;
-		
-		function showall() {
-			var result = "";
-			for (key of Object.keys(words)) {
-				result = result + "<br>" + key + ": " + words[key] + "<br>";
-			}
-			document.getElementById("container").innerHTML = result;
-		}
-		
-		var examwords = [];
-		function exam() {
-			var count = document.getElementById("count").value;
-			if (count > wordcount) {
-				count = wordcount;
-				document.getElementById("count").value = wordcount;
-			}
-			
-			var i = 0;
-			var result = "";
-			for (key of Object.keys(words)) {
-				if (i >= count) {
-					break;
-				}
-				examwords.push(key);
-				result = result + "<br>" + (i+1) + ". " + words[key] + "&nbsp;<input id='word" + i + "' class='answer'/><br>";
-				
-				i++;
-			}
-			result = result + "<br><input type='button' value='检查' onclick='check()'>";
-			document.getElementById("container").innerHTML = result;
-		}
-		
-		function check() {
-			var i = 0;
-			for (examword of examwords) {
-				var answercontrol = document.getElementById("word" + i);
-				var actual = answercontrol.value;
-				var expected = examword;
-				console.debug("index", i, actual, expected);
-				if (actual == expected) {
-					answercontrol.style.color = "blue";
-				} else {
-					answercontrol.style.color = "red";
-				}
-				i++;
-			}
-		}
-	</script>
+<script src="words.js"></script>
+<script src="index.js"></script>
+
 </body>
 </html>
