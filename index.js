@@ -12,6 +12,8 @@ function showall() {
 		
 var examwords = [];
 function exam() {
+	examwords = [];
+	
 	var count = document.getElementById("count").value;
 	if (count > wordcount) {
 		count = wordcount;
