@@ -87,7 +87,7 @@ var words = {
 	"light":"灯，光线",
 	"cup":"杯子",
 	"bowl":"碗",
-	"tV":"电视机（简写）",
+	"TV":"电视机（简写）",
 	"television":"电视机",
 	"bike":"自行车（简写）",
 	"bicycle":"自行车",
