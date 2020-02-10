@@ -22,7 +22,7 @@ function exam() {
 	
 	var i = 0;
 	var result = "";
-	var examWordIndexes = getRandomExamIndexes(count);
+	var examWordIndexes = getRandomExamIndexes(count - 1);
 
 	var wordKeys = Object.keys(words);
 	for (wordIndex of examWordIndexes) {
