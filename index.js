@@ -22,7 +22,7 @@ function exam() {
 	
 	var i = 0;
 	var result = "";
-	var examWordIndexes = getRandomExamIndexes(count - 1);
+	var examWordIndexes = getRandomExamIndexes(count);
 
 	var wordKeys = Object.keys(words);
 	for (wordIndex of examWordIndexes) {
@@ -55,7 +55,7 @@ function check() {
 function getRandomExamIndexes(examCount) {
 	var indexes = [];
 	while (indexes.length < examCount) {
-		var random = parseInt(Math.random() * (wordcount + 1), 10); 
+		var random = parseInt(Math.random() * wordcount, 10); 
 		
 		if (indexes.indexOf(random) < 0){
 			indexes.push(random);
