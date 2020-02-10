@@ -77,7 +77,7 @@ var words = {
 	"afternoon":"下午",
 	"evening":"傍晚",
 	"night":"晚上",
-	"mid-night":"半夜",
+	"midnight":"半夜",
 	"bed":"床",
 	"go to bed":"上床睡觉",
 	"wall":"墙",
