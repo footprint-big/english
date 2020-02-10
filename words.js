@@ -124,6 +124,7 @@ var words = {
 	"front":"前面",
 	"back":"后面",
 	"bad":"坏的",
+	"welcome":"欢迎，受欢迎的",
 
 	"week 1":"第一周",
 	"big":"大的",
