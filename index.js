@@ -30,7 +30,7 @@ var Exam_C = {
 	check: function() {
 		var allCorrect = true;
 		
-		$(".answer").each(function(index) {
+		$("#container .answer").each(function(index) {
 			$answer = $(this);
 			var actual = $answer.val();
 			var expected = $answer.attr("correct");
