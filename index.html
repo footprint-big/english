@@ -42,14 +42,14 @@
 			margin-left: 10pt;
 		}
 		
-		.top {
+		.backtotop {
 			font-size: 10pt;
 			position: fixed;
 			bottom: 5px;
 			right: 20%;
 		}
 		
-		.hidden > .word {
+		.hide > .word {
 			display: none;
 		}
 		
@@ -59,6 +59,29 @@
 		.correct {
 			color: blue;
 		}
+		
+		.hidden {
+			display: none;
+		}
+		
+		.done > .correct {
+			display: inline;
+			font-size: 12pt;
+		}
+		
+		.done > .wrong {
+			display: none;
+		}
+		
+		.undone > .correct {
+			display: none;
+		}
+		
+		.undone > .wrong {
+			display: inline;
+			font-size: 12pt;
+		}
+		
 	</style>
 </head>
 <body>
@@ -72,10 +95,50 @@
 	</div>
 
 	<div id=container></div>
-	<a href='javascript:scrollTo(0,0)' class='top'>返回顶部</a>
-<script src="jquery-3.4.1.min.js"></script>
-<script src="words.js"></script>
-<script src="index.js"></script>
+	<a href='javascript:scrollTo(0,0)' class='backtotop'>返回顶部</a>
+	
+	<div id="templates" class="hidden">
+		<!-- templates for examination -->
+		<p class="examword">
+			<span></span>
+			&nbsp;
+			<input class="answer" correct="">
+		</p>
+		
+		<div class="examblock">
+			<!-- examword will be inserted here -->
+			
+			<input class="checkbtn" type='button' value='检查' onclick='Exam_C.check()'>
+			&nbsp;
+			<span id='examresult' class="hidden">
+				<span class="correct">全部正确</span>
+				<span class="wrong">有错误</span>
+			</span>
+		</div>
+		
+		<!-- templates for words list -->
+		<div class="wordslistblock">
+			<!-- lesson blocks will be inserted here-->
+		</div>
+		
+		<div class='lessonblock hide'>
+			<p class='lesson'>
+				<span><!-- lesson title--></span>
+				<a href='#'>练习</a>
+			</p>
+			<!-- words will be inserted here -->
+		</div>
+		
+		<p class='word'>
+			<span><!-- word in English and Chinese --></span>
+			<span class='pron'><!-- pronunciation of this word --></span>
+		</p>
+		
+	</div>
+	
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="words.js"></script>
+	<script src="index.js"></script>
 
 </body>
 </html>

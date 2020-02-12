@@ -28,6 +28,8 @@ var Exam_C = {
 	},
 	
 	check: function() {
+		var allCorrect = true;
+		
 		$(".answer").each(function(index) {
 			$answer = $(this);
 			var actual = $answer.val();
@@ -41,6 +43,7 @@ var Exam_C = {
 					$answer.removeClass("wrong");
 				}
 			} else {
+				allCorrect = false;
 				if ($answer.hasClass("correct")) {
 					$answer.removeClass("correct");
 				}				
@@ -49,15 +52,19 @@ var Exam_C = {
 				}
 			}
 		});
+		if (allCorrect) {
+			$("#examresult").attr("class", "done");
+		} else {
+			$("#examresult").attr("class", "undone");
+		}
 	}
 }
 
-var examwords = []
 var Word_C = {
 	
 	// get words from given lesson
 	getLessonWords: function(lesson) {
-		examwords = words[lesson];
+		var examwords = words[lesson];
 		return examwords;
 	},
 	
@@ -66,7 +73,7 @@ var Word_C = {
 			count = WORDS_ARR.length;
 		}
 		
-		examwords = [];
+		var examwords = [];
 		var randomWordIndexArr = Random_C.getRandomIndexes(0, WORDS_ARR.length, count);
 		
 		for (wordIndex of randomWordIndexArr) {
@@ -100,29 +107,29 @@ var Random_C = {
 var Show_C = {
 	
 	showWordsList: function() {
-		var $wordsList = $("<div></div>");
+		var $wordsList = $("#templates > .wordslistblock").clone();
 		
 		$.each(Object.keys(words), function(index, lesson) {
-			var $lessonBlock = $("<div class='hidden'></div>");
+			var $lessonBlock = $("#templates > .lessonblock").clone();
+			$("span", $lessonBlock).text(lesson);
 			
-			var $lessonTitle = $("<p class='lesson'></p>")
-							.text(lesson)
-							.append("<a href='#' onclick='Exam_C.examLesson(\"" + lesson + "\")'>练习</a>")
-							.click(function(){
-								$(this).parent().toggleClass("hidden");
-							});
-			
-			$lessonBlock.append($lessonTitle);
-			
-			$.each(words[lesson], function(idx, word) {
-				$wordP = $("<p class='word'></p>")
-						.text(++idx + ". " + word[0] + ": " + word[1])
-						.append("&nbsp;")
-						.append($("<span class='pron'>").text(word[2]));
-				$lessonBlock.append($wordP);
+			$lessonBlock.click(function(){
+				$(this).toggleClass("hide");
 			});
 			
-			$lessonBlock.append("<a href='javascript:scrollTo(0,0)' class='top'>返回顶部</a>");
+			$("a", $lessonBlock).click(function(){
+				Exam_C.examLesson(lesson);
+			});
+			
+			
+			$.each(words[lesson], function(idx, word) {
+				$wordP = $("#templates > .word").clone();
+				$("span:first-child", $wordP).text(++idx + ". " + word[0] + ": " + word[1]);
+				$("span.pron", $wordP).text(word[2]);
+				
+				$lessonBlock.append($wordP);
+			});
+						
 			$wordsList.append($lessonBlock);
 		});
 		
@@ -130,16 +137,15 @@ var Show_C = {
 	},
 	
 	showExam: function(examWords) {
-		var $examBlock = $("<div></div>");
+		var $examBlock = $("#templates > .examblock").clone();
+
 		$.each(examWords, function(index, word) {
-			$examP = $("<p class='word'></p>")
-					.text((index+1) + ". " + word[1])
-					.append("&nbsp;")
-					.append("<input class='answer' correct='" + word[0] + "'/></p>");
-			$examBlock.append($examP);
+			$examP = $("#templates > .examword").clone();
+			$("span", $examP).text((index+1) + ". " + word[1]);
+			$(".answer", $examP).attr("correct", word[0]);
+
+			$examP.insertBefore($(".checkbtn", $examBlock));
 		});
-		
-		$examBlock.append("<input type='button' value='检查' onclick='Exam_C.check()'>");
 		
 		$("#container").empty().append($examBlock);
 	}
