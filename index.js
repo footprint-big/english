@@ -6,12 +6,11 @@
 var WORDS_ARR = [];
 
 function init(){
-	WORDS_ARR = [];
+	var wordcount = 0;
 	for (key of Object.keys(words)) {
-		WORDS_ARR = WORDS_ARR.concat(words[key]);
+		wordcount += words[key].length;
 	}
 	
-	var wordcount = WORDS_ARR.length;
 	$("#total").text(wordcount);
 }
 init();
@@ -28,14 +27,15 @@ var Exam_C = {
 	},
 	
 	check: function() {
-		var allCorrect = true;
 		
+		var wrongCount = 0, correctCount = 0;
 		$("#container .answer").each(function(index) {
 			$answer = $(this);
 			var actual = $answer.val();
 			var expected = $answer.attr("correct");
 			
 			if (actual == expected) {
+				correctCount++;
 				if (!$answer.hasClass("correct")) {
 					$answer.addClass("correct");
 				}
@@ -43,7 +43,7 @@ var Exam_C = {
 					$answer.removeClass("wrong");
 				}
 			} else {
-				allCorrect = false;
+				wrongCount++;
 				if ($answer.hasClass("correct")) {
 					$answer.removeClass("correct");
 				}				
@@ -52,11 +52,15 @@ var Exam_C = {
 				}
 			}
 		});
-		if (allCorrect) {
-			$("#examresult").attr("class", "done");
+		
+		var msg = "";
+		if (wrongCount == 0) {
+			msg = "<span class='correct'>全部正确</span>";
 		} else {
-			$("#examresult").attr("class", "undone");
+			msg = "<span class='correct'>" + correctCount + " 正确" + "</span>，"
+				+ "<span class='wrong'>" + wrongCount + " 错误" + "</span>";
 		}
+		$("#container .checkmsg").html(msg);
 	}
 }
 
@@ -69,6 +73,12 @@ var Word_C = {
 	},
 	
 	getRandomWords: function(count) {
+		if(WORDS_ARR.length == 0) {
+			for (key of Object.keys(words)) {
+				WORDS_ARR = WORDS_ARR.concat(words[key]);
+			}
+		}
+		
 		if (count > WORDS_ARR.length) {
 			count = WORDS_ARR.length;
 		}
@@ -108,32 +118,40 @@ var Show_C = {
 	
 	showWordsList: function() {
 		var $wordsList = $("#templates > .wordslistblock").clone();
-		
+		var _self = this;
 		$.each(Object.keys(words), function(index, lesson) {
 			var $lessonBlock = $("#templates > .lessonblock").clone();
 			$("span", $lessonBlock).text(lesson);
 			
 			$lessonBlock.click(function(){
-				$(this).toggleClass("hide");
+				var inited = $(this).attr("inited");
+				if (inited == 1) {
+					$(this).toggleClass("hide");
+				} else {
+					_self.showWordsInLesson($(this));
+					$(this).attr("inited", 1);
+				}
 			});
 			
 			$("a", $lessonBlock).click(function(){
 				Exam_C.examLesson(lesson);
 			});
 			
-			
-			$.each(words[lesson], function(idx, word) {
-				$wordP = $("#templates > .word").clone();
-				$("span:first-child", $wordP).text(++idx + ". " + word[0] + ": " + word[1]);
-				$("span.pron", $wordP).text(word[2]);
-				
-				$lessonBlock.append($wordP);
-			});
-						
 			$wordsList.append($lessonBlock);
 		});
 		
 		$("#container").empty().append($wordsList);
+	},
+	
+	showWordsInLesson: function($lessonBlock) {
+		var lesson = $("span", $lessonBlock).text();
+		$.each(words[lesson], function(idx, word) {
+			$wordP = $("#templates > .word").clone();
+			$("span:first-child", $wordP).text(++idx + ". " + word[0] + ": " + word[1]);
+			$("span.pron", $wordP).text(word[2]);
+			
+			$lessonBlock.append($wordP);
+		});
 	},
 	
 	showExam: function(examWords) {

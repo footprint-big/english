@@ -72,21 +72,7 @@
 			display: none;
 		}
 		
-		.done > .correct {
-			display: inline;
-			font-size: 12pt;
-		}
-		
-		.done > .wrong {
-			display: none;
-		}
-		
-		.undone > .correct {
-			display: none;
-		}
-		
-		.undone > .wrong {
-			display: inline;
+		.checkmsg {
 			font-size: 12pt;
 		}
 		
@@ -119,9 +105,7 @@
 			
 			<input class="checkbtn" type='button' value='检查' onclick='Exam_C.check()'>
 			&nbsp;
-			<span id='examresult' class="hidden">
-				<span class="correct">全部正确</span>
-				<span class="wrong">有错误</span>
+			<span id='examresult' class="checkmsg">
 			</span>
 		</div>
 		
@@ -130,7 +114,7 @@
 			<!-- lesson blocks will be inserted here-->
 		</div>
 		
-		<div class='lessonblock hide'>
+		<div class='lessonblock' inited=0>
 			<p class='lesson'>
 				<span><!-- lesson title--></span>
 				<a href='#'>练习</a>
