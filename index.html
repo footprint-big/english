@@ -11,24 +11,53 @@
 		body {
 			font-size: 14pt;
 		}
+		
 		.label {
 			font-size: 14pt;
 		}
+		
 		input.answer {
 			font-size: 14pt;
 			border: none;
 			border-bottom: solid 1px;
 			width: 110pt;
 			margin-left: 5pt;
+			outline: none;
 		}
+		
 		span.pron {
 			font-size: 10pt;
 		}
-		p.title {
-			font-size: 16pt;
+		
+		p.lesson {
+			font-size: 15pt;
 			font-weight: bold;
-			margin-top: 20pt;
-			margin-bottom: 20pt;
+			margin-top: 18pt;
+			margin-bottom: 10pt;
+		}
+		
+		p.lesson > a {
+			font-size: 10pt;
+			font-weight: normal;
+			margin-left: 10pt;
+		}
+		
+		.top {
+			font-size: 10pt;
+			position: fixed;
+			bottom: 5px;
+			right: 20%;
+		}
+		
+		.hidden > .word {
+			display: none;
+		}
+		
+		.wrong {
+			color: red;
+		}
+		.correct {
+			color: blue;
 		}
 	</style>
 </head>
@@ -39,12 +68,12 @@
 		<input type="button" onclick="Show_C.showWordsList()" value="显示所有单词"><br>
 		<span class="label">或听写</span>
 		<input id="count" value=20 size=3><span class="label">个单词</span>
-		<input type="button" value="开始听写" onclick="Exam_C.examRandomly(document.getElementById('count').value)">
+		<input type="button" value="开始练习" onclick="Exam_C.examRandomly(document.getElementById('count').value)">
 	</div>
 
 	<div id=container></div>
-	
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<a href='javascript:scrollTo(0,0)' class='top'>返回顶部</a>
+<script src="jquery-3.4.1.min.js"></script>
 <script src="words.js"></script>
 <script src="index.js"></script>
 

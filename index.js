@@ -1,3 +1,7 @@
+// TODO
+// 检查之后光标定位到第一个错误的单词
+
+
 // all words without lesson info
 var WORDS_ARR = [];
 
@@ -8,7 +12,7 @@ function init(){
 	}
 	
 	var wordcount = WORDS_ARR.length;
-	document.getElementById("total").innerText = wordcount;
+	$("#total").text(wordcount);
 }
 init();
 
@@ -24,19 +28,27 @@ var Exam_C = {
 	},
 	
 	check: function() {
-		var i = 0;
-		for (examword of examwords) {
-			var answercontrol = document.getElementById("word" + i);
-			var actual = answercontrol.value;
-			var expected = examword[0];
-			console.debug("index", i, actual, expected);
+		$(".answer").each(function(index) {
+			$answer = $(this);
+			var actual = $answer.val();
+			var expected = $answer.attr("correct");
+			
 			if (actual == expected) {
-				answercontrol.style.color = "blue";
+				if (!$answer.hasClass("correct")) {
+					$answer.addClass("correct");
+				}
+				if ($answer.hasClass("wrong")) {
+					$answer.removeClass("wrong");
+				}
 			} else {
-				answercontrol.style.color = "red";
+				if ($answer.hasClass("correct")) {
+					$answer.removeClass("correct");
+				}				
+				if (!$answer.hasClass("wrong")) {
+					$answer.addClass("wrong");
+				}
 			}
-			i++;
-		}
+		});
 	}
 }
 
@@ -88,33 +100,47 @@ var Random_C = {
 var Show_C = {
 	
 	showWordsList: function() {
-		var result = "";
-		var i = 1;
-		for (key of Object.keys(words)) {
-			result = result + "<p class='title'>" + key 
-					+ "</p><a onclick='Exam_C.examLesson(\"" + key + "\")'>练习本课</a>";
-			
-			var lessonWords = words[key];
-			for (word of lessonWords) {
-				result = result + "<p class='word'>" + i++ + ". " + word[0] + ": " + word[1] + " <span class='pron'>" + word[2]  + "</span></p>";
-			}
-		}
+		var $wordsList = $("<div></div>");
 		
-		document.getElementById("container").innerHTML = result;
+		$.each(Object.keys(words), function(index, lesson) {
+			var $lessonBlock = $("<div class='hidden'></div>");
+			
+			var $lessonTitle = $("<p class='lesson'></p>")
+							.text(lesson)
+							.append("<a href='#' onclick='Exam_C.examLesson(\"" + lesson + "\")'>练习</a>")
+							.click(function(){
+								$(this).parent().toggleClass("hidden");
+							});
+			
+			$lessonBlock.append($lessonTitle);
+			
+			$.each(words[lesson], function(idx, word) {
+				$wordP = $("<p class='word'></p>")
+						.text(++idx + ". " + word[0] + ": " + word[1])
+						.append("&nbsp;")
+						.append($("<span class='pron'>").text(word[2]));
+				$lessonBlock.append($wordP);
+			});
+			
+			$lessonBlock.append("<a href='javascript:scrollTo(0,0)' class='top'>返回顶部</a>");
+			$wordsList.append($lessonBlock);
+		});
+		
+		$("#container").empty().append($wordsList);
 	},
 	
 	showExam: function(examWords) {
-		var i = 0, result = "";
+		var $examBlock = $("<div></div>");
+		$.each(examWords, function(index, word) {
+			$examP = $("<p class='word'></p>")
+					.text((index+1) + ". " + word[1])
+					.append("&nbsp;")
+					.append("<input class='answer' correct='" + word[0] + "'/></p>");
+			$examBlock.append($examP);
+		});
 		
-		for (word of examWords) {
-			result = result + "<p class='word'>" + (i+1) + ". " 
-					+ word[1] + "&nbsp;<input id='word" + i 
-					+ "' class='answer' correct='" + word[0] + "'/></p>";
-			
-			i++;
-		}
-		result = result + "<input type='button' value='检查' onclick='Exam_C.check()'>";
-		// document.getElementById("container").innerHTML = result;
-		$("#container").html(result);
+		$examBlock.append("<input type='button' value='检查' onclick='Exam_C.check()'>");
+		
+		$("#container").empty().append($examBlock);
 	}
 }
