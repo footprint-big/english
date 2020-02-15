@@ -1,6 +1,6 @@
-// TODO
-// 检查之后光标定位到第一个错误的单词
-
+$(function(){
+	init();
+});
 
 // all words without lesson info
 var WORDS_ARR = [];
@@ -13,7 +13,6 @@ function init(){
 	
 	$("#total").text(wordcount);
 }
-init();
 
 var Exam_C = {
 	examLesson: function(lesson) {
@@ -121,17 +120,15 @@ var Show_C = {
 		var _self = this;
 		$.each(Object.keys(words), function(index, lesson) {
 			var $lessonBlock = $("#templates > .lessonblock").clone();
-			$("span", $lessonBlock).text(lesson);
-			
-			$lessonBlock.click(function(){
-				var inited = $(this).attr("inited");
-				if (inited == 1) {
-					$(this).toggleClass("hide");
-				} else {
-					_self.showWordsInLesson($(this));
-					$(this).attr("inited", 1);
-				}
-			});
+			$("span", $lessonBlock).text(lesson)
+				.click(function(){
+					if ($(this).attr("inited") == 1) {
+						$lessonBlock.toggleClass("hide");
+					} else {
+						_self.showWordsInLesson($lessonBlock);
+						$(this).attr("inited", 1);
+					}
+				});
 			
 			$("a", $lessonBlock).click(function(){
 				Exam_C.examLesson(lesson);
