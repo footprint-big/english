@@ -1,20 +1,41 @@
 var words = { // all words
 
+	"句子":[
+		["A:Nice to meet you. B:Nice to meet you, too.", "A:很高兴认识你。B:也很高兴认识你。", ""],
+		["Nice to see you again.", "很高兴又见到你。", ""],
+		["We are friends.", "我们是朋友。", ""],
+		["She's my friend.", "她是我的朋友。", ""],
+		["You are my friend.", "你是我的朋友。", ""],
+		["I'm your friend.", "我是你的朋友。", ""],
+		["She's the teacher.", "她是老师。", ""],
+		["He's the student.", "他是学生。", ""],
+		["Welcome back!", "欢迎回来！", ""],
+		// refer to https://wenku.baidu.com/view/8dfb48d577c66137ee06eff9aef8941ea76e4bb3.html (this is good)
+		["A:How do you do? B:How do you do?","A:你好吗？B:你好吗？","",""],
+		["A:How are you? B:I'm fine, thank you.","A:你好吗？B:我很好，谢谢。","",""],
+		["A:How is your mother? B:She's fine, thanks.","A:你妈妈好吗？B:她很好，谢谢。","",""],
+		["A:Thank you. B:You are welcome.","A:谢谢。B:别客气。","",""],
+		["A:Sorry. B:It doesn't matter.","A:对不起。B:不要紧。","",""],
+		["A:What's that？B:It's a desk.","A:那是什么？B:那是张桌子。","",""],
+		["A:What are these? B:These are apples.","A:这些是什么？B:这些是苹果。","",""],
+		
+	],
+	
 	"颜色": [
 		["color","颜色","[ˈkʌlər]","n.颜色,彩色,脸色,个性; v.为...着色(此为美式,英式写法为colour)"],
-		["blue","蓝色","[bluː]","n.蓝色;天蓝色;蔚蓝色; adj.蓝色的;天蓝色的;蔚蓝色的;忧郁的;悲伤的;"],
-		["gray","灰色","[ɡreɪ]","n.灰色;adj.灰色的;v.变灰白;变花白(此为美式,英式写法为grey)"],
-		["red","红色","[red]","adj.红的;红色的;红肿的;涨红的;通红的;n.红色;红葡萄酒"],
-		["orange","橙色,橙子,柑橘","[ˈɔːrɪndʒ]","n.橙子;柑橘;橙汁;橘汁饮料;橙红色;橘黄色;adj.橙红色的;橘黄色的"],
-		["yellow","黄色","[ˈjeloʊ]","adj.黄的;黄色的;n.黄;黄色;v.(使)变黄"],
-		["green","绿色","[ɡriːn]","adj.绿色的;草绿色的;n.绿色;草绿色;v.绿化;"],
-		["white","白色","[waɪt]"],
 		["black","黑色","[blæk]"],
-		["pink","粉色,粉红色","[pɪŋk]"],
-		["silver","银灰色,银,银币,银器","[ˈsɪlvər]"],
-		["gold","金色,金黄色,金,金币","[ɡoʊld]"],
+		["blue","蓝色","[bluː]","n.蓝色;天蓝色;蔚蓝色; adj.蓝色的;天蓝色的;蔚蓝色的;忧郁的;悲伤的;"],
 		["brown","棕色,褐色","[braʊn]"],
+		["gold","金色,金黄色,金,金币","[ɡoʊld]"],
+		["gray","灰色","[ɡreɪ]","n.灰色;adj.灰色的;v.变灰白;变花白(此为美式,英式写法为grey)"],
+		["green","绿色","[ɡriːn]","adj.绿色的;草绿色的;n.绿色;草绿色;v.绿化;"],
+		["orange","橙色,橙子,柑橘","[ˈɔːrɪndʒ]","n.橙子;柑橘;橙汁;橘汁饮料;橙红色;橘黄色;adj.橙红色的;橘黄色的"],
+		["pink","粉色,粉红色","[pɪŋk]"],
 		["purple","紫色","[ˈpɜːrpl]"],
+		["red","红色","[red]","adj.红的;红色的;红肿的;涨红的;通红的;n.红色;红葡萄酒"],
+		["silver","银灰色,银,银币,银器","[ˈsɪlvər]"],
+		["white","白色","[waɪt]"],
+		["yellow","黄色","[ˈjeloʊ]","adj.黄的;黄色的;n.黄;黄色;v.(使)变黄"],
 	],
 	
 	"三年级下Unit1":[ // this is lesson
@@ -44,15 +65,6 @@ var words = { // all words
 		["what", "什么", "[wɑːt]"],
 		["where", "在哪里", "[wer]"],
 		["again", "再一次,又一次", "[əˈɡen]"],
-		["Nice to meet you.", "很高兴认识你。", ""],
-		["Nice to see you again.", "很高兴又见到你。", ""],
-		["We are friends.", "我们是朋友。", ""],
-		["She's my friend.", "她是我的朋友。", ""],
-		["You are my friend.", "你是我的朋友。", ""],
-		["I'm your friend.", "我是你的朋友。", ""],
-		["She's the teacher.", "她是老师。", ""],
-		["He's the student.", "他是学生。", ""],
-		["Welcome back!", "欢迎回来！", ""],
 	],
 	
 	"阅读Week1": [
