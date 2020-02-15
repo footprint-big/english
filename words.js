@@ -180,15 +180,19 @@ var words = { // all words
 		["o'clock","...点钟","",""],
 		
 		// 整点
-		["six o'clock","6:00 a.m.","",""],
+		["six o'clock","六点整","",""],
 		
-		["seven fifteen","7:15 a.m.","",""],
-		["a quarter past seven","7:15 a.m.","",""],
-		["fifteen past seven","7:15 a.m.","",""],
+		["seven fifteen","七点十五分","",""],
+		["a quarter past seven","七点十五分","",""],
+		["fifteen past seven","七点十五分","",""],
 		
-		["a quarter to seven","6:45 a.m.","",""],
-		["half past eleven","11:30 a.m.","","正好30分时用past"],
-		["eleven thirty","11:30 a.m.","",""],
+		["six forty-five","六点四十五","",""],
+		["a quarter to seven","六点四十五","",""],
+		["fifteen to seven","六点四十五","",""],
+		
+		["eleven thirty","十一点半","",""],
+		["half past eleven","十一点半","",""],
+		["thirty past eleven","十一点半","",""],
 		
 		["day","白天,白昼","[deɪ]",""],
 		["dawn","n.黎明","[dɔːn]",""],
