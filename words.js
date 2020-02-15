@@ -176,11 +176,22 @@ var words = { // all words
 	],
 	
 	"时间":[
-		["time","时间,次数","",""],
+		["time","时间,次数","[taɪm]",""],
 		["o'clock","...点钟","",""],
 		
-		["day","白天,白昼","",""],
-		["dawn","n.黎明","",""],
+		// 整点
+		["six o'clock","6:00 a.m.","",""],
+		
+		["seven fifteen","7:15 a.m.","",""],
+		["a quarter past seven","7:15 a.m.","",""],
+		["fifteen past seven","7:15 a.m.","",""],
+		
+		["a quarter to seven","6:45 a.m.","",""],
+		["half past eleven","11:30 a.m.","","正好30分时用past"],
+		["eleven thirty","11:30 a.m.","",""],
+		
+		["day","白天,白昼","[deɪ]",""],
+		["dawn","n.黎明","[dɔːn]",""],
 		["morning","早晨,上午",""],
 		["noon","中午",""],
 		["afternoon","下午",""],
@@ -188,27 +199,37 @@ var words = { // all words
 		["night","晚上",""],
 		["midnight","半夜",""],
 		
+		["A:What time is it now? B:It's seven o'clock.","A:现在几点了？B:现在是七点钟。","",""],
+		["A:What's the time by your watch? B:It's ten past nine.","A:你的手表现在几点了？B:9点10分。","",""],
+	],
+	
+	"日期": [
 		["today","今天","[təˈdeɪ]"],
-		["tonight","n.今晚；adv.在今晚","",""],
+		["tonight","n.今晚；adv.在今晚","[təˈnaɪt]",""],
 		["tomorrow","明天",""],
 		["yesterday","昨天",""],
 		["the day before yesterday","前天",""],
 		["the day after tomorrow","后天",""],
 		
 		["now","现在,目前","[naʊ]"],
-		["future","adj.将来的；n.将来","",""],
-		["past","adj.过去的；n.过去","",""],
+		["future","adj.将来的；n.将来","[ˈfjuːtʃər]",""],
+		["past","adj.过去的；n.过去","[pæst]",""],
+		
+		["in the future","在未来","",""],
+		["in the past","在过去","",""],
 	],
 	
 	"星期":[
-		["weekend","周末","",""],
-		["Monday","周一","",""],
-		["Tuesday","周二","",""],
-		["Wednesday","周三","",""],
-		["Thursday","周四","",""],
-		["Friday","周五","",""],
-		["Saturday","周六","",""],
-		["Sunday","周日","",""],
+		["weekend","周末","[ˈwiːkend]",""],
+		["Monday","周一","[ˈmʌndeɪ]",""],
+		["Tuesday","周二","[ˈtuːzdeɪ]",""],
+		["Wednesday","周三","[ˈwenzdeɪ]",""],
+		["Thursday","周四","[ˈθɜːrzdeɪ]",""],
+		["Friday","周五","[ˈfraɪdeɪ]",""],
+		["Saturday","周六","[ˈsætərdeɪ]",""],
+		["Sunday","周日","[ˈsʌndeɪ]",""],
+		
+		["A:What day is it today? B:It's Wednesday.","A:今天星期几？B:星期三。","",""],
 	],
 	
 	"月份":[
