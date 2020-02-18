@@ -582,17 +582,19 @@ var words = { // all words
 
 	"学校相关":[
 
-		["school","学校",""],
+		["school","学校","[skuːl]"],
 		["primary school","小学",""],
 		
 		["teacher","教师","[ˈtiːtʃər]"],
 		["student","学生","[ˈstuːdnt]"],
+		["pupil","学生（尤指）小学生","[ˈpjuːpl]"],
+		
 		["classmate","同学","[ˈklæsmeɪt]",""],
 		
-		["class","班级，种类","",""],
-		["classroom","教室，课堂","",""],
+		["class","班级，种类，等级","[klæs]",""],
+		["classroom","教室，课堂","[ˈklæsruːm]",""],
 		
-		["blackboard","黑板","",""],
+		["blackboard","黑板","[ˈblækbɔːrd]",""],
 		["chalk","粉笔","[tʃɑːk]",""],
 		
 		["book","n.书籍；vt.登记","",""],
@@ -601,17 +603,19 @@ var words = { // all words
 		["pencil","铅笔",""],
 		["eraser","橡皮",""],
 		
-		["grade","年级，等级，成绩","",""],
+		["grade","年级，等级，成绩","[ɡreɪd]",""],
+		["first grade","一年级","",""],
+		["second grade","二年级","",""],
 		
-		["lesson","一节课，课；经验，教训","",""],
+		["lesson","一节课，课；经验，教训","[ˈlesn]",""],
 		["math","数学(简写)","",""],
 		// ["mathematics","数学","",""],
 		["science","科学，理科","",""],
 		["sport","运动","",""],
 		
-		["spell","拼写","",""],
+		["spell","拼写","[spel]",""],
 		["study","学习，研究","",""],
-		["teach","教，教授，教导","",""],
+		["teach","教，教授，教导","[tiːtʃ]",""],
 		["read","读","[riːd]",""],
 		["write","写，写字；写作","[raɪt]",""],
 		["draw","v.画，绘画;n.抽奖；平局","",""],
@@ -717,7 +721,6 @@ var words = { // all words
 		["Canada", "加拿大", "[ˈkænədə]"],
 		["USA","美国（简写）",""],
 		["China","中国","[ˈtʃaɪnə]"],
-		["pupil","学生（尤指）小学生","[ˈpjuːpl]"],
 		["and","和；与","[ənd,ænd]"],
 		["new","新的","[nuː]"],
 		["friend","朋友","[frend]"],
