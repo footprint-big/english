@@ -319,7 +319,7 @@ var words = { // all words
 		["A:What's the time by your watch? B:It's ten past nine.","A:你的手表现在几点了？B:9点10分。","",""],
 	],
 	
-	"日期": [
+	"日期-done": [
 		["today","今天","[təˈdeɪ]"],
 		["tonight","n.今晚；adv.在今晚","[təˈnaɪt]",""],
 		["tomorrow","明天",""],
@@ -371,7 +371,7 @@ var words = { // all words
 		["winter","冬季","",""],
 	],
 	
-	"方向":[
+	"方向-done":[
 		["direction","方向","",""],
 		["east","东方","",""],
 		["south","南方","",""],
