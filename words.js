@@ -15,10 +15,10 @@ var words = { // all words
 
 		["The alarm clock went off. Get up right away.","闹钟响了，快起床。","",""],
 		["Give me five more minutes to snooze.","再让小睡5分钟。","",""],
-		["Mom, it’ s too late. Did you set the alarm clock last night?","妈妈，太晚了，昨晚你设闹钟了吗？","",""],
+		["Mom, it’s too late. Did you set the alarm clock last night?","妈妈，太晚了，昨晚你设闹钟了吗？","",""],
 		["Yes, I set it for six thirty.","设了呀，我设在6点半了。","",""],
-		["Why didn’ t the alarm go off?","闹钟怎么没响呢？","",""],
-		["I didn’ t let it go off. I wanted you to sleep more.","我没让它响，我想让你多睡会儿。","",""],
+		["Why didn’t the alarm go off?","闹钟怎么没响呢？","",""],
+		["I didn’t let it go off. I wanted you to sleep more.","我没让它响，我想让你多睡会儿。","",""],
 		["Mom, please set the alarm clock.","妈妈，请设好闹钟。","",""],
 		["Mom, please set the alarm clock for six thirty.","妈妈，请把闹铃设到6点半。","",""],
 	],
