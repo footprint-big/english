@@ -2,6 +2,55 @@
 
 var words = { // all words
 
+	"上学前的忙碌-scene 2": [
+		["alarm","警报，警报器","[əˈlɑːrm]",""],
+		["clock","钟，时钟","[klɑːk]",""],
+		["alarm clock","闹钟","",""],
+		["right away","马上，立刻","[raɪt əˈweɪ]",""],
+		["snooze","（尤指在白天）小睡，打盹","[snuːz]",""],
+		["go off","（铃，闹钟等）响","",""],
+		["last","上一个的，最后的，最末的","[lɑːst]",""],
+		["set","设置","[set]",""],
+		["set the alarm clock","设闹钟","",""],
+
+		["The alarm clock went off. Get up right away.","闹钟响了，快起床。","",""],
+		["Give me five more minutes to snooze.","再让小睡5分钟。","",""],
+		["Mom, it’ s too late. Did you set the alarm clock last night?","妈妈，太晚了，昨晚你设闹钟了吗？","",""],
+		["Yes, I set it for six thirty.","设了呀，我设在6点半了。","",""],
+		["Why didn’ t the alarm go off?","闹钟怎么没响呢？","",""],
+		["I didn’ t let it go off. I wanted you to sleep more.","我没让它响，我想让你多睡会儿。","",""],
+		["Mom, please set the alarm clock.","妈妈，请设好闹钟。","",""],
+		["Mom, please set the alarm clock for six thirty.","妈妈，请把闹铃设到6点半。","",""],
+	],
+	
+	"上学前的忙碌-scene 1": [
+		["One more hour.","再多一个小时。",""],
+		["One more year.","再多一年。",""],
+		
+		["wake","v.醒;醒来;唤醒","[weɪk]"],
+		["wake up","醒醒",""],
+		["get","v.收到;接到;获得;得到;","[ɡet]"],
+		["get up","起床",""],
+		["sleepyhead","懒鬼，瞌睡虫",""],
+		["sleep","v.睡，睡觉；n.睡眠","[sliːp]"],
+		["sleepy","困倦的","[ˈsliːpi]"],
+		["early","早的","[ˈɜːrli]"],
+		["late","迟的，晚的","[leɪt]"],
+		["move","v.(使)改变位置，移动;n.行动;移动;活动;","[muːv]"],
+		["It's time to ...","该...了,It's可省略",""],
+		["It's time to have breakfast.","该吃早饭了。",""],
+/*
+		["Hurry up. Time is running out.","别磨蹭，没时间了。",""]
+		["Wake up, sleepyhead.", "起床了，小懒虫"],
+		["One more minute.","再睡一分钟。",""],
+		["It's time to get up.","该起床了。",""],
+		["It's still early. I want to sleep some more.","还早呢，我想再睡会儿。",""],
+		["But you move so slowly.","但是你很磨蹭。",""],
+		["Get up, or you'll be late.","起床了，要不就要迟到了。",""],
+		["OK, but I'm still sleepy.","好的，可我还困着呢。",""],
+*/
+	],
+	
 	"颜色": [
 		["color","颜色","[ˈkʌlər]","n.颜色,彩色,脸色,个性; v.为...着色(此为美式,英式写法为colour)"],
 		["black","黑色","[blæk]"],
@@ -659,6 +708,9 @@ var words = { // all words
 		// ["leopard","豹子","[ˈlepərd]"],
 		
 		["spider","蜘蛛","[ˈspaɪdər]"],
+		["funnel-web spider","漏斗网蜘蛛","[ˈfʌnl web ˈspaɪdər]"],
+		
+		["mammoth","猛犸象，长毛象","[ˈmæməθ]","《冰河世纪》的动画片"],
 	],
 	
 	"职业": [
@@ -844,9 +896,6 @@ var words = { // all words
 		["bad","坏的",""],
 		["welcome","欢迎；受欢迎的",""],
 	],
-};
-
-not_learned = {
 	
 	"阅读Week4": [
 		["hen", "母鸡", "[hen]"],
@@ -855,6 +904,7 @@ not_learned = {
 		["come", "来,来到,到达", "[kʌm]"],
 		["fly", "飞；苍蝇", "[flaɪ]"],
 		["fast", "快的,迅速的", "[fæst]"],
+		["slow","慢的",""],
 		["rain", "雨,雨水；下雨", "[reɪn]"],
 		["wind", "风", "[wɪnd]"],
 		["snow", "雪,雪花,积雪；下雪", "[snoʊ]"],
@@ -868,6 +918,9 @@ not_learned = {
 		["dinner","正餐，晚餐",""],
 		
 	],
+};
+
+not_learned = {
 	
 	"句式": [
 		// 参考 https://wenku.baidu.com/view/9226f88adf80d4d8d15abe23482fb4daa58d1daf.html
