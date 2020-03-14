@@ -51,7 +51,7 @@
 			right: 20%;
 		}
 		
-		.hide > .word {
+		.hidden, .hide > .word {
 			display: none;
 		}
 		
@@ -78,11 +78,15 @@
 			font-size: 12pt;
 		}
 		
+		span.answertip {
+			font-size: 10pt;
+			color: silver;
+		}
 	</style>
 </head>
 <body>
 	
-	<h3>恭喜你，你已经学习了<span id=total>&nbsp;?&nbsp;</span>个单词！</h3>
+	<h3 ondblclick="Show_C.showAnswerTipBtn()">恭喜你，你已经学习了<span id=total>&nbsp;?&nbsp;</span>个单词！</h3>
 	<div id=options>
 		<input type="button" onclick="Show_C.showWordsList()" value="显示所有单词"><br>
 		<span class="label">或听写</span>
@@ -97,9 +101,10 @@
 	<div id="templates" class="hidden">
 		<!-- templates for examination -->
 		<p class="examword">
-			<span></span>
+			<span class="question"></span>
 			&nbsp;
 			<input class="answer" correct="">
+			<span class="answertip hidden"></span>
 		</p>
 		
 		<div class="examblock">
@@ -109,6 +114,7 @@
 			&nbsp;
 			<span id='examresult' class="checkmsg">
 			</span>
+			<input id="answertipbtn" class="hidden" type='button' value='答案提示' onclick='Show_C.toggleAnswerTip()'>
 		</div>
 		
 		<!-- templates for words list -->

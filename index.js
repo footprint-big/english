@@ -156,12 +156,32 @@ var Show_C = {
 
 		$.each(examWords, function(index, word) {
 			$examP = $("#templates > .examword").clone();
-			$("span", $examP).text((index+1) + ". " + word[1]);
+			$("span.question", $examP).text((index+1) + ". " + word[1]);
 			$(".answer", $examP).attr("correct", word[0]);
 
 			$examP.insertBefore($(".checkbtn", $examBlock));
 		});
 		
 		$("#container").empty().append($examBlock);
+	},
+	
+	isAnswerTipShown: false,
+	
+	toggleAnswerTip: function() {
+
+		if (!Show_C.isAnswerTipShown) {
+			
+			var $answerInputs = $("input.answer");
+			$.each($answerInputs, function(index, answerInput) {
+				var correctAnswer = $(answerInput).attr("correct");
+				$("span.answertip", $(answerInput).parent()).text(correctAnswer);	
+			});
+		}
+		
+		$("span.answertip").toggleClass("hidden");
+	},
+	
+	showAnswerTipBtn: function() {
+		$("#answertipbtn").toggleClass("hidden");
 	}
 }
