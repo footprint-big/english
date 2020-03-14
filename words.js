@@ -76,14 +76,14 @@ var words = { // all words
 		
 		["wall","墙",""],
 		["floor","地板","[flɔːr]"],
-
+/*
 		["bathroom","浴室，厕所，盥洗室","",""],
 		["restroom","(公共场所的)厕所，盥洗室；公共厕所","",""],
 		["living room","客厅","",""],
 		["bedroom","卧室","",""],
 		["kitchen","厨房",""],
 		["dining room","餐厅","",""],
-		
+*/		
 	],
 	
 	"家具": [
@@ -97,6 +97,7 @@ var words = { // all words
 		["chair","椅子",""],
 		["desk","办公桌，书桌，写字台","",""],
 		["table","桌子","","广义的table包含desk"],
+/*		
 		["dining table","餐桌","",""],
 		["school table","课桌","",""],
 		// ["dressing table","梳妆台","",""],
@@ -110,7 +111,7 @@ var words = { // all words
 		["couch","长沙发椅","",""],
 		
 		["curtain","窗帘","",""],
-		
+*/		
 		["go to bed","上床睡觉",""],
 	],
 	
@@ -120,12 +121,13 @@ var words = { // all words
 		["television","电视机",""],
 		["bike","自行车（简写）",""],
 		["bicycle","自行车",""],
+/*		
 		["refrigerator","冰箱","",""],
 		
 		["fan","风扇，扇子；迷，狂热爱好者;","[fæn]",""],
 		// ["electric fan","电扇","",""],
 		// ["stand fan","落地风扇","",""],
-		
+*/		
 		["light","n.电灯,光线;adj.轻的，明亮的",""],
 		["lamp","灯","[læmp]",""],
 		// ["desk lamp","台灯","",""],
@@ -135,14 +137,16 @@ var words = { // all words
 		// ["bed lamp","床头灯","",""],
 		// ["wall light","壁灯","",""],
 		// ["floor lamp","落地灯","",""],
-		
+/*		
 		["electric iron","电熨斗","",""],
 		
 		["turn on the light","打开电灯","",""],
 		["turn off the light","关掉电灯","",""],		
+*/
 	],
 	
 	"厨房用品": [
+/*	
 		["tableware","餐具","",""],
 		
 		["spoon","勺子","",""],
@@ -152,9 +156,11 @@ var words = { // all words
 		["glass","玻璃杯，玻璃","",""],
 		["cup","(一般小型带把手的)杯子","",""],
 		["dish","(较深的、椭圆形的)碟子","",""],
+		["bottle","瓶子","",""],
+*/		
 		["plate","(较浅的)盘子","",""],
 		["bowl","碗","",""],
-		["bottle","瓶子","",""],
+		
 		// ["teapot","茶壶","",""],
 		
 		// ["chopping board","案板","",""],
@@ -162,14 +168,18 @@ var words = { // all words
 	],
 		
 	"酒水饮料零食": [
-		["water","水","",""],
+
 		["milk","牛奶","",""],
-		["yogurt","酸奶","",""],
+		["water","水","",""],
 		["juice","果汁","",""],
 		["tea","茶","",""],
+		["coffee","咖啡，咖啡豆，咖啡色","",""],
+/*		
+		["yogurt","酸奶","",""],
+
 		["Coke","可乐",""]
 		["Coca-Cola","可口可乐","",""],
-		["coffee","咖啡，咖啡豆，咖啡色","",""],
+		
 		["ice cream","冰淇淋","",""],
 		// ["sundae","圣代冰淇淋","",""],
 		
@@ -178,16 +188,20 @@ var words = { // all words
 		["red wine","红酒","",""],
 		
 		["biscuit","饼干","",""],
+*/
 	],
 	
 	"食物": [
+/*	
 		["food","食物","",""],
 		["fruit","水果","",""],
 		["vegetable","蔬菜","",""],
+*/
 		["meat","肉，肉类(食用)","",""],
 	],
 	
 	"食物-主食": [
+/*	
 		["rice","稻，米饭","",""],
 		["soup","汤","",""],
 		["noodle","面条","[ˈnuːdl]",""],
@@ -196,10 +210,10 @@ var words = { // all words
 		["tea eggs","茶叶蛋","",""],
 		["cookies","饼干","",""],
 		["dumpling","水饺","",""],
-		
+*/		
 		["cake","蛋糕","",""],
 		["bread","面包","",""],
-		["corn","玉米","",""],
+/*		["corn","玉米","",""],
 		
 		["salad","沙拉","",""],
 		["pizza","披萨","",""],
@@ -215,14 +229,16 @@ var words = { // all words
 		["strong flour","高筋面粉","",""],
 		
 		// ["preserved eggs","皮蛋，松花蛋","",""],
+*/
 	],
 	
 	"食物-水果": [
 		["apple","苹果","",""],
-		["peach","桃","",""],
-		["grape","葡萄","",""],
 		["orange","橘子","",""],
 		["banana","香蕉","",""],
+/*
+		["peach","桃","",""],
+		["grape","葡萄","",""],
 		["pear","梨","",""],
 		["strawberry","草莓","",""],
 		["blueberry","蓝莓","",""],
@@ -234,9 +250,11 @@ var words = { // all words
 		["kiwi","奇异果","",""],
 		["star fruit","杨桃","",""],
 		["Chinese date","枣","",""],
+*/
 	],
 	
 	"食物-蔬菜": [
+/*	
 		["carrot","胡萝卜","",""],
 		["tomato","西红柿","",""],
 		["potato","马铃薯","",""],
@@ -244,20 +262,25 @@ var words = { // all words
 		["mushroom","蘑菇","",""],
 		["onion","洋葱","",""],
 		["peanut","花生","",""],
+*/
 	],
 
 	"食物-肉类": [
-		["beef","牛肉","",""],
-		["mutton","羊肉","",""],
-		["chicken","鸡肉","[ˈtʃɪkɪn]",""],
+/*
 		["pork","猪肉","",""],
+		["beef","牛肉","",""],
+		["chicken","鸡肉","[ˈtʃɪkɪn]",""],
+		["mutton","羊肉","",""],
+*/
 	],
 	
 	"食物-水产类": [
 		["fish","鱼，鱼肉","",""],
+/*
 		["crab","螃蟹，蟹肉","[kræb]",""],
 		["prawn","对虾，大虾，明虾","[prɔːn]",""],
 		["lobster","龙虾，龙虾肉","[ˈlɑːbstər]",""],
+*/
 	],
 	
 	"调料": [
@@ -265,6 +288,7 @@ var words = { // all words
 		// ["refined sugar","白糖","",""],
 		// ["brown sugar","红糖","",""],
 		["salt","盐","",""],
+/*		
 		["oil","油","",""],
 		// ["salad oil","色拉油","",""],
 		["vinegar","醋","",""],
@@ -278,24 +302,29 @@ var words = { // all words
 		// ["garlic","蒜","",""],
 		
 		["pepper","胡椒粉;甜椒;柿子椒;灯笼椒","[ˈpepər]",""],
+*/
 	],
 		
 	"餐类": [
+/*
 		["breakfast","早餐",""],
 		["lunch","中餐",""],
 		["supper","晚餐",""],
 		["dinner","正餐，晚餐",""],
+*/
 	],
 	
 	"餐厅相关": [
+/*
 		["restaurant","餐馆;餐厅","[ˈrestrɑːnt]",""],
 		["menu","菜单","[ˈmenjuː]",""],
 		["a table for one","一个一人桌","",""],
 		["a table for two","一个双人桌","",""],
+*/
 	],
 	
 	"衣服鞋帽": [
-	
+/*
 		["hat","帽子，有边的帽子，礼帽","",""],
 		["cap","帽子，无边的便帽，表示职业的帽子，如运动帽、军帽等","",""],
 		["glove","手套","",""],
@@ -311,6 +340,7 @@ var words = { // all words
 		["shoes","鞋","",""],
 		
 		["glasses","眼镜","",""],
+*/
 	],
 	
 	"数字-done": [
@@ -337,9 +367,11 @@ var words = { // all words
 		["forty","四十",""],
 		["one hundred","一百",""],
 		["four hundred","四百",""],
+/*		
 		["thousand","千","",""],
 		["million","百万","",""],
 		["billion","十亿","",""],
+*/
 	],
 	
 	"时间日期":[
@@ -348,9 +380,11 @@ var words = { // all words
 		["quarter","四分之一,一刻钟","",""],
 		["hour","小时","",""],
 		["day","一天","",""],
+/*		
 		["week","周，星期","",""],
 		["month","月，月份","",""],
 		["year","月，月份","",""],
+*/
 	],
 	
 	"时间-done":[
@@ -402,6 +436,7 @@ var words = { // all words
 	],
 	
 	"星期":[
+/*
 		["weekend","周末","[ˈwiːkend]",""],
 		["Monday","周一","[ˈmʌndeɪ]",""],
 		["Tuesday","周二","[ˈtuːzdeɪ]",""],
@@ -412,9 +447,11 @@ var words = { // all words
 		["Sunday","周日","[ˈsʌndeɪ]",""],
 		
 		["A:What day is it today? B:It's Wednesday.","A:今天星期几？B:星期三。","",""],
+*/
 	],
 	
 	"月份":[
+/*
 		["January","一月","",""],
 		["February","二月","",""],
 		["March","三月","",""],
@@ -427,6 +464,7 @@ var words = { // all words
 		["October","十月","",""],
 		["November","十一月","",""],
 		["December","十二月","",""],
+*/
 	],
 
 	"季节-done":[
@@ -464,7 +502,7 @@ var words = { // all words
 		["short","矮的，短的；不足的","",""],
 		
 		["tall","adj.高的，长的","",""],
-
+/*
 		["shape","形状","",""],
 		["square","正方形","",""],
 		["triangle","三角形","",""],
@@ -481,9 +519,11 @@ var words = { // all words
 		["weight","重量","",""],
 		["heavy","adj.沉重的，繁重的","",""],
 		["light","n.电灯,光线;adj.轻的，明亮的","",""],
+*/
 	],
 	
 	"位置": [
+/*
 		["position","位置，方位","",""],
 				
 		["in","在...之内","",""],
@@ -496,9 +536,11 @@ var words = { // all words
 		["there","在那里","[ðer]"],
 		
 		["high","adj.高的，高级的","",""],
+*/
 	],
 	
 	"天气": [
+/*
 		["weather","天气","",""],
 		["storm","暴风雨","",""],
 		["snow","积雪,下雪","",""],
@@ -517,6 +559,7 @@ var words = { // all words
 		["sunny","晴朗的","",""],
 		["snowy","下雪的，多雪的","",""],
 		["foggy","有雾的","",""],
+*/
 	],
 	
 	"温度-done":[
@@ -550,7 +593,7 @@ var words = { // all words
 		["gender","性别","",""],
 	],
 	
-	"人身体部位":[
+	"人身体部位-done":[
 		["head","头",""],
 		["brain","脑袋；头脑，智力","",""],
 		["hair","头发",""],
@@ -569,7 +612,7 @@ var words = { // all words
 		["foot","脚",""],
 	],
 	
-	"人的动作": [
+	"人的动作-almost done": [
 	
 		["speak","v.讲话，说话","[spiːk]",""],
 		["say","v.说，讲，告诉","",""],
@@ -606,19 +649,26 @@ var words = { // all words
 	],
 	
 	"人的感受":[
+/*
 		["hungry","adj.饥饿的，渴望的","",""],
 		["thirsty","渴的","",""],
 		["tired","累的，困的","",""],
+		["sad","adj.悲哀的;难过的;","[sæd]"],
+*/
 	],
 	
 	"电子产品": [
+/*
 		["phone","n.电话;vt.打电话","",""],
 		["computer","电脑，计算机","",""],
+*/
 	],
 	
 	"日常用品": [
+/*
 		["key","钥匙",""],
 		["watch","手表",""],
+*/
 	],
 	
 	"亲属": [
@@ -680,7 +730,7 @@ var words = { // all words
 		["grade","年级，等级，成绩","[ɡreɪd]",""],
 		["first grade","一年级","",""],
 		["second grade","二年级","",""],
-		
+/*		
 		["lesson","一节课，课；经验，教训","[ˈlesn]",""],
 		["math","数学(简写)","",""],
 		// ["mathematics","数学","",""],
@@ -693,6 +743,7 @@ var words = { // all words
 		["read","读","[riːd]",""],
 		["write","写，写字；写作","[raɪt]",""],
 		["draw","v.画，绘画;n.抽奖；平局","",""],
+*/
 	],
 	
 	"动物-done": [
@@ -716,8 +767,8 @@ var words = { // all words
 		["elephant","大象",""],
 		["lion","狮子","[ˈlaɪən]",""],
 		["monkey","猴子","[ˈmʌŋki]"],
-		["panda","熊猫",""],
 		["tiger","老虎",""],
+		["panda","熊猫",""],
 		["horse","马","[hɔːrs]"],
 		["deer","鹿","[dɪr]"],
 		["wolf","狼","[wʊlf]"],
@@ -727,26 +778,33 @@ var words = { // all words
 		["spider","蜘蛛","[ˈspaɪdər]"],
 		["funnel-web spider","漏斗网蜘蛛","[ˈfʌnl web ˈspaɪdər]"],
 		
-		["mammoth","猛犸象，长毛象","[ˈmæməθ]","《冰河世纪》的动画片"],
+		// ["mammoth","猛犸象，长毛象","[ˈmæməθ]","《冰河世纪》的动画片"],
 	],
 	
 	"职业": [
+/*
 		["doctor","医生；博士","",""],
 		["driver","驾驶员","",""],
 		["player","演员，演奏者","",""],
 		["worker","工人","[ˈwɜːrkər]"],
 		["farmer","农场主;农民","[ˈfɑːrmər]"],
+*/
 	],
 	
 	"地貌": [
+/*
 		["river","河，江","",""],
 		["mountain","大山","",""],
 		["hill","小山","",""],
+*/
 	],
 	
 	"交通工具": [
+/*	
 		["boat", "小船", "[pleɪn]"],
 		["ship","(大)船;舰",""],
+		["plane", "飞机", "[pleɪn]"],
+*/
 		["car","小汽车,轿车","[kɑːr]"],
 		["bus","公共汽车,巴士","[bʌs]"],
 		["truck","卡车,载重汽车","[trʌk]"],
@@ -756,7 +814,6 @@ var words = { // all words
 		["station","车站,站,所","[ˈsteɪʃn]"],
 		["bus stop","公交车站",""],
 		["railway station","火车站",""],
-		["plane", "飞机", "[pleɪn]"],
 	],
 	
 	"人称代词-主格": [
@@ -782,12 +839,14 @@ var words = { // all words
 	],
 	
 	"常见玩具": [
+/*	
 		["ball","球",""],
 		["football","足球",""],
 		["basketball","篮球","",""],
 		["kite","风筝","",""],
 		["balloon","气球","",""],
 		["doll","玩具娃娃","",""],
+*/
 	],
 	
 	"物主代词-形容词性": [
@@ -802,6 +861,7 @@ var words = { // all words
 	],
 	
 	"物主代词-名词性": [
+/*
 		["mine","我的(名词性)","",""],
 		["yours","你的，你们的(名词性)","",""],
 		["hers","她的(名词性)",""],
@@ -810,6 +870,7 @@ var words = { // all words
 		
 		["ours","我们的(名词性)","",""],
 		["theirs","他们的，它们的(名词性)","",""],
+*/
 	],
 	
 	"三年级下Unit1":[ // this is lesson
@@ -860,6 +921,7 @@ var words = { // all words
 	],
 	
 	"阅读Week1-4": [
+/*	
 		["hen","母鸡;雌禽","[hen]"],
 		["cock","公鸡;雄禽","[kɒk]"],
 		["ready", "准备好；最好...的准备", "[ˈredi]"],
@@ -877,13 +939,16 @@ var words = { // all words
 		["He gets ready to go.","他准备好出发了。",""],
 		["get on","登上",""],
 		["get on a bus","登上一辆公交车",""],
+*/
 	],
 	
 	"阅读Week1-5": [
+/*
 		["lake","湖;湖泊","[leɪk]"],
 		["skate","(通常指)滑冰，溜冰;滑(滑板)","[skeɪt]"],
 		["go home","回家","[ɡoʊ hoʊm]"],
 		["bank","银行","[bæŋk]"],
+*/
 	],
 	
 	"阅读Week2-1": [
@@ -913,6 +978,7 @@ var words = { // all words
 		["She's the teacher.", "她是老师。", ""],
 		["He's the student.", "他是学生。", ""],
 		["Welcome back!", "欢迎回来！", ""],
+/*
 		// refer to https://wenku.baidu.com/view/8dfb48d577c66137ee06eff9aef8941ea76e4bb3.html (this is good)
 		["A:How do you do? B:How do you do?","A:你好吗？B:你好吗？","",""],
 		["A:How are you? B:I'm fine, thank you.","A:你好吗？B:我很好，谢谢。","",""],
@@ -921,6 +987,7 @@ var words = { // all words
 		["A:Sorry. B:It doesn't matter.","A:对不起。B:不要紧。","",""],
 		["A:What's that？B:It's a desk.","A:那是什么？B:那是张桌子。","",""],
 		["A:What are these? B:These are apples.","A:这些是什么？B:这些是苹果。","",""],
+*/
 		
 	],
 	
