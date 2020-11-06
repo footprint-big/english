@@ -100,12 +100,12 @@
 				
 			</div>
 			<label>增值服务</label>
-			<input id="s-support" value=0>人天
+			<input id="s-service" value=0>人天
 			<br>
 			<span class="desc">如琥珀眼定制开发、安全规则定制、报告解读、安全修复咨询等</span>
 			<br>
 			
-			<div class="splitter">   </div>
+			<div class="splitter"></div>
 			
 			<label>价格:</label><span id="d-price"></span>
 			<br>
@@ -170,25 +170,25 @@ $(function(){
 		
 	});
 	
-	$("#s-support").keyup(function(){
+	$("#s-service").keyup(function(){
 		
-		console.debug($("#s-support").val());
+		console.debug($("#s-service").val());
 		calculate();
 		
 	});
 
 	BOTTOM_PRICE = 10000;
 	calculate = function() {
-		// support
+		// service
 		var PATTERN = /^\d+$/
-		support = $("#s-support").val();
+		service = $("#s-service").val();
 		  
-	    if(support != "" && !PATTERN.test(support) ){
+	    if(service != "" && !PATTERN.test(service) ){
 	    	alert("增值服务的人天数必须是正整数")
 	        return;
 	    }
-		if (support == "") {
-			support = 0;
+		if (service == "") {
+			service = 0;
 		}
 		
 		
@@ -215,7 +215,7 @@ $(function(){
 			product_price = BOTTOM_PRICE;
 		}
 		
-		extra_price = support * 4000;
+		extra_price = service * 4000;
 		total_price = product_price + extra_price;
 		
 		$("#d-price").text(total_price + "元人民币");
@@ -228,7 +228,7 @@ $(function(){
 		}
 		$("#d-freesupport").text(freeSupport);
 		
-		console.info("40000 * lang * engine * code * duration + support * 4000 \n" + "40000*" + lang + "*" + engine + "*" + code + "*" + duration + "+" + support + "*" + 4000 );
+		console.info("40000 * lang * engine * code * duration + service * 4000 \n" + "40000*" + lang + "*" + engine + "*" + code + "*" + duration + "+" + service + "*" + 4000 );
 	};
 	
 		
