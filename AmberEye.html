@@ -4,9 +4,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 		<title>琥珀眼产品授权价格评估计算器</title>
-		<noscript>琥珀眼产品价格计算器需要浏览器支持Javascript才能正常工作</noscript>
+		<noscript>琥珀眼产品授权价格评估计算器需要浏览器支持Javascript才能正常工作</noscript>
 		<style>
-				
+							
 			*{
 				margin-bottom: 8px;
 			}
@@ -20,90 +20,99 @@
 				height: 23px;
 			}
 			
-			#detail {
-				padding-left: 20px;
+			#container {
+				padding: 10px;
 			}
 			
 			.desc {
+			
 				font-style: italic;
    			    font-size: 13px;
     			color: gray;
 			}
 			
+			.splitter {
+				margin-top: 20px;
+				border-bottom: 1px gray solid;
+				width: 600px;
+				height: 4px;
+			}
+				
 		</style>
 	</head>
 	<body>
-		<h1>琥珀眼产品授权价格评估计算器</h1>
-		<br>
-		
-		<label>套餐选择</label>
-		<label><input name="s-package" type="radio" value="corp" selected />集团公司版</label>
-		<label><input name="s-package" type="radio" value="enterprise" />大企业版</label> 
-		<label><input name="s-package" type="radio" value="custom" />定制版本</label> 
-		<br><br>
-		
-		<div id="detail">
-			<!-- -->
-			<label>开发语言</label>
-			<label><input name="s-language" type="checkbox" value="0" />Java</label>
-			<label><input name="s-language" type="checkbox" value="1" />Android</label>
-			<label><input name="s-language" type="checkbox" value="2" />C/C++</label>
-			<label><input name="s-language" type="checkbox" value="3" />C#</label>
-			<label><input name="s-language" type="checkbox" value="4" />VB.NET</label>
-			<label><input name="s-language" type="checkbox" value="5" />PHP</label>
-			<label><input name="s-language" type="checkbox" value="6" />Scala</label>
-			
-			<br><br>
-			
-			<label>引擎个数</label>
-			<select id="s-engine">
-				<option value="1">1</option>
-				<option value="1.25">2</option>
-				<option value="1.5">3</option>
-				<option value="2">5</option>
-				<option value="2.5">10</option>
-				<option value="3">15</option>
-			</select>
-			
+		<div id="container">
+			<h1>琥珀眼产品授权价格评估计算器</h1>
 			<br>
 			
-			<label>代码规模</label>
-			<select id="s-code">
-				<option value="1">&lt;=100万行</option>
-				<option value="2">&lt;=200万行</option>
-				<option value="4">&lt;=500万行</option>
-				<option value="8">&lt;=1000万行</option>
-				<option value="10">不限行数</option>
-			</select>
+			<label>套餐选择</label>
+			<label><input name="s-package" type="radio" value="corp" selected />集团公司版</label>
+			<label><input name="s-package" type="radio" value="enterprise" />大企业版</label> 
+			<label><input name="s-package" type="radio" value="custom" />定制版本</label> 
+			<br><br>
 			
+			<div id="detail">
+				<!-- -->
+				<label>开发语言</label>
+				<label><input name="s-language" type="checkbox" value="0" />Java</label>
+				<label><input name="s-language" type="checkbox" value="1" />Android</label>
+				<label><input name="s-language" type="checkbox" value="2" />C/C++</label>
+				<label><input name="s-language" type="checkbox" value="3" />C#</label>
+				<label><input name="s-language" type="checkbox" value="4" />VB.NET</label>
+				<label><input name="s-language" type="checkbox" value="5" />PHP</label>
+				<label><input name="s-language" type="checkbox" value="6" />Scala</label>
+				
+				<br><br>
+				
+				<label>引擎个数</label>
+				<select id="s-engine">
+					<option value="1">1</option>
+					<option value="1.25">2</option>
+					<option value="1.5">3</option>
+					<option value="2">5</option>
+					<option value="2.5">10</option>
+					<option value="3">15</option>
+				</select>
+				
+				<br>
+				
+				<label>代码规模</label>
+				<select id="s-code">
+					<option value="1">&lt;=100万行</option>
+					<option value="2">&lt;=200万行</option>
+					<option value="4">&lt;=500万行</option>
+					<option value="8">&lt;=1000万行</option>
+					<option value="10">不限行数</option>
+				</select>
+				
+				<br>
+				
+				<label>授权时长</label>
+				<select id="s-duration">
+					<option value="0.03">1周</option>
+					<option value="0.1">1月</option>
+					<option value="1">1年</option>
+					<option value="1.5">3年</option>
+					<option value="2">不限期</option>
+				</select>
+				
+				<br><br>
+				
+			</div>
+			<label>增值服务</label>
+			<input id="s-support" value=0>人天
+			<br>
+			<span class="desc">如琥珀眼定制开发、安全规则定制、报告解读、安全修复咨询等</span>
 			<br>
 			
-			<label>授权时长</label>
-			<select id="s-duration">
-				<option value="0.03">1周</option>
-				<option value="0.1">1月</option>
-				<option value="1">1年</option>
-				<option value="1.5">3年</option>
-				<option value="2">不限期</option>
-			</select>
+			<div class="splitter">   </div>
 			
-			<br><br>
+			<label>价格:</label><span id="d-price"></span>
+			<br>
+			<p class="desc">含免费现场技术支持<span id="d-freesupport"></span>人天</p>
 			
 		</div>
-		<label>增值服务</label>
-		<input id="s-support" value=0>人天
-		<br>
-		<span class="desc">如琥珀眼定制开发、安全规则定制，及报告解读、安全修复咨询等</span>
-		<br>
 		
-		<p>--------------------------------------------------------</p>
-		
-		<label>价格:</label><span id="d-price"></span>
-		<br>
-		<p class="desc">含免费现场技术支持<span id="d-freesupport"></span>人天</p>
-		
-		<p>--------------------------------------------------------</p>
-
 <script src="jquery-3.4.1.min.js"></script>
 <script>
 
@@ -133,21 +142,30 @@ $(function(){
 			calculate();
 			
 		} else { // custom
-			// do nothing
+			
+			var languages = $("input[name=s-language]")
+			languages.prop('checked', false);
+		
+			languages[0].checked = true;
+			languages[1].checked = true;
+			languages[2].checked = true;
+			
+			calculate();
+			
 		}
 		
 	});
 
 	$("select", $("#detail")).change(function(){
 		
-		$("input[type='radio'][name='s-package'][value='custom']").attr("checked","checked");
+		$("input[type='radio'][name='s-package'][value='custom']").prop("checked","checked");
 		calculate();
 		
 	});
 	
 	$("input", $("#detail")).change(function(){
 		
-		$("input[type='radio'][name='s-package'][value='custom']").attr("checked","checked");
+		$("input[type='radio'][name='s-package'][value='custom']").prop("checked","checked");
 		calculate();
 		
 	});
@@ -159,6 +177,7 @@ $(function(){
 		
 	});
 
+	BOTTOM_PRICE = 10000;
 	calculate = function() {
 		// support
 		var PATTERN = /^\d+$/
@@ -192,12 +211,21 @@ $(function(){
 		duration = $("#s-duration").val();
 		
 		product_price = 40000 * lang * engine * code * duration;
+		if (product_price < BOTTOM_PRICE) {
+			product_price = BOTTOM_PRICE;
+		}
+		
 		extra_price = support * 4000;
 		total_price = product_price + extra_price;
 		
 		$("#d-price").text(total_price + "元人民币");
 		
-		freeSupport = Math.ceil(product_price / 50000); 
+		freeSupport = product_price / 50000;
+		if (freeSupport < 1) {
+			freeSupport = 0;
+		} else {
+			freeSupport = Math.ceil(freeSupport); 
+		}
 		$("#d-freesupport").text(freeSupport);
 		
 		console.info("40000 * lang * engine * code * duration + support * 4000 \n" + "40000*" + lang + "*" + engine + "*" + code + "*" + duration + "+" + support + "*" + 4000 );
