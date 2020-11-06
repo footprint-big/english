@@ -33,8 +33,7 @@
 		</style>
 	</head>
 	<body>
-		<h1>琥珀眼代码安全扫描产品价格计算器</h1>
-		<h4>自动计算价格仅供参考，详细价格请联系您的销售经理</h4>
+		<h1>琥珀眼产品授权价格评估计算器</h1>
 		<br>
 		
 		<label>套餐选择</label>
@@ -73,7 +72,7 @@
 				<option value="1">&lt;=100万行</option>
 				<option value="2">&lt;=200万行</option>
 				<option value="4">&lt;=500万行</option>
-				<option value="8">&lt;1000万行</option>
+				<option value="8">&lt;=1000万行</option>
 				<option value="10">不限行数</option>
 			</select>
 			
@@ -92,7 +91,7 @@
 			
 		</div>
 		<label>增值服务</label>
-		<input id="s-support" value=0>人天（现场）
+		<input id="s-support" value=0>人天
 		<br>
 		<span class="desc">如琥珀眼定制开发、安全规则定制，及报告解读、安全修复咨询等</span>
 		<br>
@@ -200,6 +199,8 @@ $(function(){
 		
 		freeSupport = Math.ceil(product_price / 50000); 
 		$("#d-freesupport").text(freeSupport);
+		
+		console.info("40000 * lang * engine * code * duration + support * 4000 \n" + "40000*" + lang + "*" + engine + "*" + code + "*" + duration + "+" + support + "*" + 4000 );
 	};
 	
 		
