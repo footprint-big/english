@@ -1,0 +1,145 @@
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<meta http-equiv="pragma" content="no-cache"> 
+	<meta http-equiv="Cache-Control" content="no-cache, must-revalidate"> 
+	<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
+	
+	<title>学习单词</title>
+	<style>
+		body {
+			font-size: 14pt;
+			background-color: RGB(227, 237, 205);
+		}
+		
+		.label {
+			font-size: 14pt;
+		}
+		
+		input.answer {
+			font-size: 14pt;
+			border: none;
+			border-bottom: solid 1px;
+			width: 110pt;
+			margin-left: 5pt;
+			outline: none;
+			background-color: transparent;
+		}
+		
+		span.pron {
+			font-size: 10pt;
+		}
+		
+		p.lesson {
+			font-size: 15pt;
+			font-weight: bold;
+			margin-top: 18pt;
+			margin-bottom: 10pt;
+		}
+		
+		p.lesson > a {
+			font-size: 10pt;
+			font-weight: normal;
+			margin-left: 10pt;
+		}
+		
+		.backtotop {
+			font-size: 10pt;
+			position: fixed;
+			bottom: 5px;
+			right: 20%;
+		}
+		
+		.hidden, .hide > .word {
+			display: none;
+		}
+		
+		.wrong {
+			color: red;
+		}
+		.correct {
+			color: blue;
+		}
+		
+		input.wrong{
+			border-bottom: solid 1px red;
+		}
+		
+		input.correct {
+			border-bottom: solid 1px blue;
+		}
+		
+		.hidden {
+			display: none;
+		}
+		
+		.checkmsg {
+			font-size: 12pt;
+		}
+		
+		span.answertip {
+			font-size: 10pt;
+			color: silver;
+		}
+	</style>
+</head>
+<body>
+	
+	<h3 ondblclick="Show_C.showAnswerTipBtn()">恭喜你，你已经学习了<span id=total>&nbsp;?&nbsp;</span>个单词！</h3>
+	<div id=options>
+		<input type="button" onclick="Show_C.showWordsList()" value="显示所有单词"><br>
+		<span class="label">或听写</span>
+		<input id="count" value=20 size=3><span class="label">个单词</span>
+		<input type="button" value="开始练习" onclick="Exam_C.examRandomly(document.getElementById('count').value)">
+	</div>
+
+	<div id=container></div>
+	
+	<a href='javascript:scrollTo(0,0)' class='backtotop'>返回顶部</a>
+	
+	<div id="templates" class="hidden">
+		<!-- templates for examination -->
+		<p class="examword">
+			<span class="question"></span>
+			&nbsp;
+			<input class="answer" correct="">
+			<span class="answertip hidden"></span>
+		</p>
+		
+		<div class="examblock">
+			<!-- examword will be inserted here -->
+			
+			<input class="checkbtn" type='button' value='检查' onclick='Exam_C.check()'>
+			&nbsp;
+			<span id='examresult' class="checkmsg">
+			</span>
+			<input id="answertipbtn" class="hidden" type='button' value='答案提示' onclick='Show_C.toggleAnswerTip()'>
+		</div>
+		
+		<!-- templates for words list -->
+		<div class="wordslistblock">
+			<!-- lesson blocks will be inserted here-->
+		</div>
+		
+		<div class='lessonblock' inited=0>
+			<p class='lesson'>
+				<span><!-- lesson title--></span>
+				<a href='#'>练习</a>
+			</p>
+			<!-- words will be inserted here -->
+		</div>
+		
+		<p class='word'>
+			<span><!-- word in English and Chinese --></span>
+			<span class='pron'><!-- pronunciation of this word --></span>
+		</p>
+		
+	</div>
+	
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="words.js"></script>
+	<script src="index.js"></script>
+
+</body>
+</html>
