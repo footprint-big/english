@@ -66,17 +66,17 @@
 	<body>
 		<div id="container">
 			<h1>琥珀眼产品授权价格评估计算器</h1>
-			
-			<label>套餐选择</label>
-			<input name="s-package" type="radio" value="corp" selected />集团公司版
-			<input name="s-package" type="radio" value="enterprise" />大企业版
-			<input name="s-package" type="radio" value="custom" />定制版本 
-			<br><br>
-			
+			<div>
+				<label>套餐选择</label>
+				<input name="s-package" type="radio" value="corp" style="margin-left:0" selected />集团公司版
+				<input name="s-package" type="radio" value="enterprise" />大企业版
+				<input name="s-package" type="radio" value="custom" />定制版本 
+			</div>
+			<br>
 			<div id="detail">
 				<div>
 					<label>开发语言</label>
-					<input name="s-language" type="checkbox" />Java
+					<input name="s-language" type="checkbox" style="margin-left:0" />Java
 					<input name="s-language" type="checkbox" />Android
 					<input name="s-language" type="checkbox" />C/C++
 					<input name="s-language" type="checkbox" />C#
@@ -85,7 +85,7 @@
 					<input name="s-language" type="checkbox" />Scala
 				</div>
 				<br>
-				<div>
+				<div style="margin-bottom:4px;">
 					<label>引擎个数</label>
 					<select id="s-engine">
 						<option value="1">1</option>
@@ -96,7 +96,7 @@
 						<option value="3">15</option>
 					</select>
 				</div>
-				<div>
+				<div style="margin-bottom:4px;">
 					<label>代码规模</label>
 					<select id="s-code">
 						<option value="1">&lt;=100万行</option>
