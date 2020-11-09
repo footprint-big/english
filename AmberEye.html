@@ -9,11 +9,11 @@
 		<title>琥珀眼产品授权价格评估计算器</title>
 		<noscript>琥珀眼产品授权价格评估计算器需要浏览器支持Javascript才能正常工作</noscript>
 		<style>
-							
-			*{
-				margin-bottom: 8px;
+				
+			body {
+				text-align: center;
 			}
-						
+							
 			label {
 				margin-right: 10px;
 				font-weight: bold;
@@ -31,23 +31,31 @@
 			}
 			
 			#container {
-				padding: 10px;
+				padding: 0 10px 10px 10px;
 				width:auto; 
 				display:inline-block !important; 
 				display:inline;
 				border: 1px solid gray;
 				background-color: rgb(252,252,252);
+				text-align: left;
+			}
+			
+			#container h1 {
+				text-align: center;
 			}
 			
 			.desc {
-			
 				font-style: italic;
    			    font-size: 13px;
     			color: gray;
+    			margin-top: 8px;
+    			margin-bottom: 8px;
 			}
 			
 			.splitter {
-				margin-top: 20px;
+				margin-top: 15px;
+				margin-bottom: 15px;
+				
 				border-bottom: 1px gray solid;
 				width: 100%;
 				height: 4px;
@@ -58,7 +66,6 @@
 	<body>
 		<div id="container">
 			<h1>琥珀眼产品授权价格评估计算器</h1>
-			<br>
 			
 			<label>套餐选择</label>
 			<input name="s-package" type="radio" value="corp" selected />集团公司版
@@ -67,65 +74,68 @@
 			<br><br>
 			
 			<div id="detail">
-				<!-- -->
-				<label>开发语言</label>
-				<input name="s-language" type="checkbox" value="0" />Java
-				<input name="s-language" type="checkbox" value="1" />Android
-				<input name="s-language" type="checkbox" value="2" />C/C++
-				<input name="s-language" type="checkbox" value="3" />C#
-				<input name="s-language" type="checkbox" value="4" />VB.NET
-				<input name="s-language" type="checkbox" value="5" />PHP
-				<input name="s-language" type="checkbox" value="6" />Scala
-				
-				<br><br>
-				
-				<label>引擎个数</label>
-				<select id="s-engine">
-					<option value="1">1</option>
-					<option value="1.25">2</option>
-					<option value="1.5">3</option>
-					<option value="2">5</option>
-					<option value="2.5">10</option>
-					<option value="3">15</option>
-				</select>
-				
+				<div>
+					<label>开发语言</label>
+					<input name="s-language" type="checkbox" />Java
+					<input name="s-language" type="checkbox" />Android
+					<input name="s-language" type="checkbox" />C/C++
+					<input name="s-language" type="checkbox" />C#
+					<input name="s-language" type="checkbox" />VB.NET
+					<input name="s-language" type="checkbox" />PHP
+					<input name="s-language" type="checkbox" />Scala
+				</div>
 				<br>
-				
-				<label>代码规模</label>
-				<select id="s-code">
-					<option value="1">&lt;=100万行</option>
-					<option value="2">&lt;=200万行</option>
-					<option value="4">&lt;=500万行</option>
-					<option value="8">&lt;=1000万行</option>
-					<option value="10">不限行数</option>
-				</select>
-				
-				<br>
-				
-				<label>授权时长</label>
-				<select id="s-duration">
-					<option value="0.03">1周</option>
-					<option value="0.1">1月</option>
-					<option value="1">1年</option>
-					<option value="1.5">3年</option>
-					<option value="2">不限期</option>
-				</select>
-				
-				<br><br>
-				
+				<div>
+					<label>引擎个数</label>
+					<select id="s-engine">
+						<option value="1">1</option>
+						<option value="1.25">2</option>
+						<option value="1.5">3</option>
+						<option value="2">5</option>
+						<option value="2.5">10</option>
+						<option value="3">15</option>
+					</select>
+				</div>
+				<div>
+					<label>代码规模</label>
+					<select id="s-code">
+						<option value="1">&lt;=100万行</option>
+						<option value="2">&lt;=200万行</option>
+						<option value="4">&lt;=500万行</option>
+						<option value="8">&lt;=1000万行</option>
+						<option value="10">不限行数</option>
+					</select>
+				</div>
+				<div>
+					<label>授权时长</label>
+					<select id="s-duration">
+						<option value="0.03">1周</option>
+						<option value="0.1">1月</option>
+						<option value="1">1年</option>
+						<option value="1.5">3年</option>
+						<option value="2">不限期</option>
+					</select>
+				</div>
 			</div>
-			<label>增值服务</label>
-			<input id="s-service" value=0>人天
 			<br>
-			<span class="desc">如琥珀眼定制开发、安全规则定制、报告解读、安全修复咨询等</span>
-			<br>
+			<div>
+				<div>
+					<label>增值服务</label>
+					<input id="s-service" value=0>人天
+				</div>
+				
+				<div class="desc">包含琥珀眼定制开发、安全规则定制、报告解读、安全修复咨询等</div>
+			</div>
 			
 			<div class="splitter"></div>
+			<div>		
+				<label>价格:</label>
+				<span id="d-price"></span>
+			</div>
 			
-			<label>价格:</label><span id="d-price"></span>
-			<br>
-			<p class="desc">含免费现场技术支持<span id="d-freesupport"></span>人天</p>
+			<div class="desc">含免费现场技术支持<span id="d-freesupport"></span>人天</div>
 			
+			<div class="desc" id="d-hdconf"></div>
 		</div>
 		
 <script src="jquery-3.4.1.min.js"></script>
@@ -192,7 +202,21 @@ $(function(){
 		
 	});
 
-	BOTTOM_PRICE = 10000;
+	// CONSTANTS
+	BASE_OF_PRODUCT_PRICE = 40000;
+	BOTTOM_PRICE_OF_PRODUCT = 10000;
+	PRICE_OF_SERVICE = 4000;
+	HARDWARE_CONFIG_RECOMMEND = {
+			1: [6, "32G", "512G"],
+			2: [8, "48G", "1T"],
+			3: [10, "64G", "2T"],
+			5: [16, "96G", "4T"],
+			10: [24, "128G", "8T"],
+			15: [32, "192G", "16T"],
+	};
+	LANG_WEIGHTS = [0, 1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7];
+	BASE_OF_FREE_SUPPORT = 50000;
+	
 	calculate = function() {
 		// service
 		var PATTERN = /^\d+$/
@@ -206,8 +230,6 @@ $(function(){
 			service = 0;
 		}
 		
-		
-		lang_matrix = [0, 1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7];
 		langCount = 0;
 		$("input[name=s-language]").each(function(idx, lang){
 			if (lang.checked) {
@@ -220,22 +242,22 @@ $(function(){
 			return;
 		}
 		
-		lang = lang_matrix[langCount];
-		engine = $("#s-engine").val();
-		code = $("#s-code").val();
-		duration = $("#s-duration").val();
+		langWeight = LANG_WEIGHTS[langCount];
+		engineWeight = $("#s-engine").val();
+		codeWeight = $("#s-code").val();
+		durationWeight = $("#s-duration").val();
 		
-		product_price = 40000 * lang * engine * code * duration;
-		if (product_price < BOTTOM_PRICE) {
-			product_price = BOTTOM_PRICE;
+		product_price = BASE_OF_PRODUCT_PRICE * langWeight * engineWeight * codeWeight * durationWeight;
+		if (product_price < BOTTOM_PRICE_OF_PRODUCT) {
+			product_price = BOTTOM_PRICE_OF_PRODUCT;
 		}
 		
-		extra_price = service * 4000;
+		extra_price = service * PRICE_OF_SERVICE;
 		total_price = product_price + extra_price;
 		
 		$("#d-price").text(total_price + "元人民币");
 		
-		freeSupport = product_price / 50000;
+		freeSupport = product_price / BASE_OF_FREE_SUPPORT;
 		if (freeSupport < 1) {
 			freeSupport = 0;
 		} else {
@@ -243,7 +265,12 @@ $(function(){
 		}
 		$("#d-freesupport").text(freeSupport);
 		
-		console.info("40000 * lang * engine * code * duration + service * 4000 \n" + "40000*" + lang + "*" + engine + "*" + code + "*" + duration + "+" + service + "*" + 4000 );
+		// console.info(BASE_OF_PRODUCT_PRICE + " * langWeight * engineWeight * codeWeight * durationWeight + service * " + PRICE_OF_SERVICE + " \n" + BASE_OF_PRODUCT_PRICE + " *" + langWeight + "*" + engineWeight + "*" + codeWeight + "*" + durationWeight + "+" + service + "*" + PRICE_OF_SERVICE );
+		
+		var engineCount = $("#s-engine option:selected").text();
+		var hdConfig = HARDWARE_CONFIG_RECOMMEND[engineCount];
+		var hdConfigDesc = "推荐服务器/虚拟机配置：CPU " + hdConfig[0] + "核 以上，内存 " + hdConfig[1] + " 以上，硬盘 " + hdConfig[2] + " 以上"
+		$("#d-hdconf").text(hdConfigDesc);
 	};
 	
 		
