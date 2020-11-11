@@ -111,7 +111,7 @@
 						<option value="0.03">1周</option>
 						<option value="0.1">1月</option>
 						<option value="1">1年</option>
-						<option value="3">不限期</option>
+						<option value="2.5">不限期（含3年授权，之后每年维保15%）</option>
 					</select>
 				</div>
 			</div>
@@ -160,7 +160,7 @@ $(function(){
 			$("input[name=s-language]").prop('checked', true);
 			$("#s-engine")[0].options[0].selected = true;
 			$("#s-code")[0].options[4].selected = true;
-			$("#s-duration")[0].options[2].selected = true;
+			$("#s-duration")[0].options[3].selected = true;
 			
 			calculate();
 			
