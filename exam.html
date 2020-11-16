@@ -88,7 +88,7 @@
 	
 	<h3 ondblclick="Show_C.showAnswerTipBtn()">恭喜你，你已经学习了<span id=total>&nbsp;?&nbsp;</span>个单词！</h3>
 	<div id=options>
-		<input type="button" onclick="Show_C.showWordsList()" value="显示所有单词"><br>
+		<input type="button" onclick="Show_C.showWordsList()" value="显示所有单词">&nbsp;&nbsp;<input id="sort" type="checkbox" /><span style="font-size:10pt;">按字母排序</span><br>
 		<span class="label">或听写</span>
 		<input id="count" value=20 size=3><span class="label">个单词</span>
 		<input type="button" value="开始练习" onclick="Exam_C.examRandomly(document.getElementById('count').value)">

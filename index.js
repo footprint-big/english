@@ -142,7 +142,21 @@ var Show_C = {
 	
 	showWordsInLesson: function($lessonBlock) {
 		var lesson = $("span", $lessonBlock).text();
-		$.each(words[lesson], function(idx, word) {
+		var wordsInLesson = words[lesson];
+		if ($("#sort").prop("checked")) {
+			wordsInLesson.sort(
+				function(a, b){
+					av = a[0].toLowerCase();
+					bv = b[0].toLowerCase();
+
+					if (av > bv) return 1;
+					if (av < bv) return -1;
+					return 0;
+				}
+			);
+		}
+		
+		$.each(wordsInLesson, function(idx, word) {
 			$wordP = $("#templates > .word").clone();
 			$("span:first-child", $wordP).text(++idx + ". " + word[0] + ": " + word[1]);
 			$("span.pron", $wordP).text(word[2]);
