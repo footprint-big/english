@@ -67,7 +67,7 @@
 			<h1>琥珀眼产品价格计算</h1>
 			<div>
 				<label>套餐选择</label>
-				<input name="s-package" type="radio" value="corp" style="margin-left:0" selected />集团公司版
+				<input name="s-package" type="radio" value="corp" style="margin-left:0" />集团公司版
 				<input name="s-package" type="radio" value="enterprise" />大企业版
 				<input name="s-package" type="radio" value="custom" />定制版本 
 			</div>
@@ -98,10 +98,10 @@
 				<div style="margin-bottom:4px;">
 					<label>代码规模</label>
 					<select id="s-code">
-						<option value="1">&lt;=100万行</option>
-						<option value="2">&lt;=200万行</option>
-						<option value="4">&lt;=500万行</option>
-						<option value="8">&lt;=1000万行</option>
+						<option value="1">&lt;=30万行</option>
+						<option value="2">&lt;=100万行</option>
+						<option value="4">&lt;=250万行</option>
+						<option value="8">&lt;=500万行</option>
 						<option value="10">不限行数</option>
 					</select>
 				</div>
@@ -111,8 +111,7 @@
 						<option value="0.03">1周</option>
 						<option value="0.1">1月</option>
 						<option value="1">1年</option>
-						<option value="1.5">3年</option>
-						<option value="2">不限期</option>
+						<option value="2.5">不限期（含3年授权，之后每年维保15%）</option>
 					</select>
 				</div>
 			</div>
@@ -152,7 +151,7 @@ $(function(){
 			$("input[name=s-language]").prop('checked', true);
 			$("#s-engine")[0].options[3].selected = true;
 			$("#s-code")[0].options[4].selected = true;
-			$("#s-duration")[0].options[4].selected = true;
+			$("#s-duration")[0].options[3].selected = true;
 			
 			calculate();
 			
@@ -173,6 +172,10 @@ $(function(){
 			languages[0].checked = true;
 			languages[1].checked = true;
 			languages[2].checked = true;
+			
+			$("#s-engine")[0].options[0].selected = true;
+			$("#s-code")[0].options[3].selected = true;
+			$("#s-duration")[0].options[2].selected = true;
 			
 			calculate();
 			
@@ -274,7 +277,7 @@ $(function(){
 	
 		
 	// initialize
-	$("input[name=s-package]").first().prop("checked", true).trigger("change");
+	$("input[name=s-package][value=custom]").prop("checked", true).trigger("change");
 	
 });
 </script>
