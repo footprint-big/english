@@ -394,6 +394,34 @@ var words = { // all words
 
 	],
 	
+	"序数词(第1-19除了first, second, third有特殊形式权外，其余均由基数词加后缀-th构成)":[
+		["first","","","1st"],
+		["second","","","2nd"],
+		["third","","","3rd"],
+		["fourth","","","4th"],
+		["fifth","","","5th"],
+		["sixth","","","6th"],
+		["seventh","","","7th"],
+		["eighth","","","8th"],
+		["ninth","","","9th"],
+		["tenth","","","10th"],
+		["eleventh","","","11th"],
+		["twelfth","","","12th"],
+		["thirteenth","","","13th"],
+		["fourteenth","","","14th"],
+		["fifteenth","","","15th"],
+		["sixteenth","","","16th"],
+		["seventeenth","","","17th"],
+		["eighteenth","","","18th"],
+		["nineteenth","","","19th"],
+		["twentieth","","","20th"],
+		["twenty-first","","","21st"],
+		["twenty-second","","","22nd"],
+		["twenty-third","","","23rd"],
+		["twenty-fourth","","","24th"],
+		
+	],
+	
 	"时间日期":[
 		["second","秒","",""],
 		["minute","分钟","",""],
