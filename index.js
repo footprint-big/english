@@ -157,9 +157,13 @@ var Show_C = {
 		}
 		
 		$.each(wordsInLesson, function(idx, word) {
+
 			$wordP = $("#templates > .word").clone();
 			$("span:first-child", $wordP).text(++idx + ". " + word[0] + ": " + word[1]);
 			$("span.pron", $wordP).text(word[2]);
+			if (word.length > 3) {
+				$("span.comment", $wordP).text(word[3]);
+			}
 			
 			$lessonBlock.append($wordP);
 		});
