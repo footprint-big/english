@@ -166,7 +166,7 @@ $(function(){
 			
 		} else { // custom
 			
-			var languages = $("input[name=s-language]")
+			var languages = $("input[name=s-language]");
 			languages.prop('checked', false);
 		
 			languages[0].checked = true;
@@ -221,11 +221,11 @@ $(function(){
 	
 	calculate = function() {
 		// service
-		var PATTERN = /^\d+$/
+		var PATTERN = /^\d+$/;
 		service = $("#s-service").val();
 		  
 	    if(service != "" && !PATTERN.test(service) ){
-	    	alert("增值服务的人天数必须是正整数")
+	    	alert("增值服务的人天数必须是正整数");
 	        return;
 	    }
 		if (service == "") {
@@ -237,10 +237,10 @@ $(function(){
 			if (lang.checked) {
 				langCount++;
 			}
-		})
+		});
 		
 		if(langCount <= 0) {
-			alert("至少需要选择一种开发语言")
+			alert("至少需要选择一种开发语言");
 			return;
 		}
 		
@@ -271,7 +271,7 @@ $(function(){
 		
 		var engineCount = $("#s-engine option:selected").text();
 		var hdConfig = HARDWARE_CONFIG_RECOMMEND[engineCount];
-		var hdConfigDesc = "推荐机器配置：CPU " + hdConfig[0] + "核 +，内存 " + hdConfig[1] + "+，硬盘 " + hdConfig[2] + "+"
+		var hdConfigDesc = "推荐机器配置：CPU " + hdConfig[0] + "核 +，内存 " + hdConfig[1] + "+，硬盘 " + hdConfig[2] + "+";
 		$("#d-hdconf").text(hdConfigDesc);
 	};
 	
