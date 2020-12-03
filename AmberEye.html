@@ -87,31 +87,31 @@
 				<div style="margin-bottom:4px;">
 					<label>引擎个数</label>
 					<select id="s-engine">
-						<option value="1">1</option>
-						<option value="1.25">2</option>
-						<option value="1.5">3</option>
-						<option value="2">5</option>
-						<option value="2.5">10</option>
-						<option value="3">15</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>5</option>
+						<option>10</option>
+						<option>15</option>
 					</select>
 				</div>
 				<div style="margin-bottom:4px;">
 					<label>代码规模</label>
 					<select id="s-code">
-						<option value="1">&lt;=30万行</option>
-						<option value="2">&lt;=100万行</option>
-						<option value="4">&lt;=250万行</option>
-						<option value="8">&lt;=500万行</option>
-						<option value="10">不限行数</option>
+						<option>&lt;=30万行</option>
+						<option>&lt;=100万行</option>
+						<option>&lt;=250万行</option>
+						<option>&lt;=500万行</option>
+						<option>不限行数</option>
 					</select>
 				</div>
 				<div>
 					<label>授权时长</label>
 					<select id="s-duration">
-						<option value="0.03">1周</option>
-						<option value="0.1">1月</option>
-						<option value="1">1年</option>
-						<option value="2.5">不限期（含3年授权，之后每年维保15%）</option>
+						<option>1周</option>
+						<option>1月</option>
+						<option>1年</option>
+						<option>不限期（含3年授权，之后每年维保15%）</option>
 					</select>
 				</div>
 			</div>
@@ -140,6 +140,20 @@
 <script>
 
 $(function(){
+	var engineWeight = [1, 1.25, 1.5, 2, 2.5, 3];
+	$("#s-engine option").each(function(idx){
+		$(this).val(engineWeight[idx]);
+	});
+	
+	var codeWeight = [1, 2, 4, 8, 10];
+	$("#s-code option").each(function(idx){
+		$(this).val(codeWeight[idx]);
+	});
+	
+	var durationWeight = [0.03, 0.1, 1, 2.5];
+	$("#s-duration option").each(function(idx){
+		$(this).val(durationWeight[idx]);
+	});
 	
 	$("input[name=s-package]").change(function(event) {
 		
