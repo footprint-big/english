@@ -89,10 +89,10 @@
 			}
 			
 			checkSum = CHECK_SUM_ARR[total_sum % 11];
-			if (idNumArr[17] == checkSum) {
+			if (idNumArr[17].toUpperCase() == checkSum) {
 				return {valid: true};
 			} else {
-				return {valid: false, desc:"校验码不正确，正确的验证码应该是" + checkSum};
+				return {valid: false, desc:"校验码不正确，正确值是" + checkSum};
 			}
 			
 		}
