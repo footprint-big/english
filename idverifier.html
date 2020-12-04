@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta http-equiv="pragma" content="no-cache"> 
+		<meta http-equiv="Cache-Control" content="no-cache, must-revalidate"> 
+		<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<title>身份证号码校验</title>
+		<noscript>需要浏览器支持Javascript才能正常工作</noscript>
+		<style>
+			body {
+				padding-top: 8pt;
+			}
+			
+			#idnum {
+				margin-left: 8pt;
+			}
+			
+			#result {
+				font-size: 10pt;
+				margin-top: 5pt;
+			}
+			.info {
+				font-size: 10pt;
+				color: gray;
+			}
+			
+			.error {
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h2>身份证号码格式校验示例</h2>
+		<span class="info">(仅校验了18位身份证号码的最后一位，其他未校验）</span>
+		<br><br>
+		<label for="idnum">输入18位身份证号码</label>
+		<input id="idnum" value="" size=18 onkeyup="check(this)" />
+		
+		<br>
+		<span id="result"></span>
+	</body>
+
+	<script>
+		
+		WEIGHT_ARR = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
+		CHECK_SUM_ARR = "10X98765432";
+		
+		function showInfo(infoStr) {
+			resultDom = document.getElementById("result");
+			resultDom.className = "info";
+			resultDom.innerText = infoStr;
+		}
+		
+		function showError(errorStr) {
+			resultDom = document.getElementById("result");
+			resultDom.className = "error";
+			resultDom.innerText = errorStr;
+		}
+		
+		function check() {
+			idnumInput = document.getElementById("idnum");
+			resultDom = document.getElementById("result");
+			
+			if (idnumInput.value.length < 18) {
+				showInfo("已输入" + idnumInput.value.length + "位");
+			} else if (idnumInput.value.length > 18) {
+				showError("请输入18位身份证号码");
+			} else {
+				verfiyResult = verify(idnumInput.value);
+				if (verfiyResult.valid) {
+					showInfo("该身份证号码格式有效");
+				} else {
+					showError(verfiyResult.desc);
+				}
+			}
+		}
+		
+		function verify(idStr) {
+			total_sum = 0;
+			idx = 0;
+			idNumArr = idStr.split("");
+			
+			while (idx < WEIGHT_ARR.length) {
+				total_sum += idNumArr[idx] * WEIGHT_ARR[idx];
+				idx++;
+			}
+			
+			checkSum = CHECK_SUM_ARR[total_sum % 11];
+			if (idNumArr[17] == checkSum) {
+				return {valid: true};
+			} else {
+				return {valid: false, desc:"校验码不正确，正确的验证码应该是" + checkSum};
+			}
+			
+		}
+	</script>
+
+</html>
