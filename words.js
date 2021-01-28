@@ -354,6 +354,7 @@ var words = { // all words
 		["sneakers","运动鞋","",""],
 		["socks","袜子","",""],
 		["sweater","毛衣","",""],
+		["swimsuit","泳衣","",""],
 		
 		["T-shirt","T恤衫","",""],
 
@@ -733,6 +734,7 @@ var words = { // all words
 
 		["key","钥匙",""],
 		["watch","手表",""],
+		["towel","毛巾，抹布","[ˈtaʊəl]"],
 
 	],
 	
@@ -834,6 +836,8 @@ var words = { // all words
 		// ["cow","母牛",""],
 		
 		["deer","鹿","[dɪr]"],
+		["milu deer","麋鹿",""],
+		
 		["dog","狗","",""],
 		["duck","鸭子",""],
 		
@@ -873,13 +877,22 @@ var words = { // all words
 		
 	],
 	
-	"职业": [
+	"运动": [
 
+		["swim","游泳","[swɪm]",""],
+		
+	],
+	
+	"职业": [
+		["cook","v.烹饪;烹调;煮(或烘烤、煎炸等);n.做饭的人;炊事员;厨师","[kʊk]",""],
+		["chef","厨师;(尤指餐馆、饭店等的)主厨，厨师长","[ʃef]",""],
 		["doctor","医生；博士","",""],
 		["driver","驾驶员","",""],
 		["player","演员，演奏者","",""],
 		["worker","工人","[ˈwɜːrkər]"],
 		["farmer","农场主;农民","[ˈfɑːrmər]"],
+		["guard","n.卫兵;警卫员;看守",""],
+		["lifeguard","救生员",""],
 
 	],
 	
@@ -1074,6 +1087,10 @@ var words = { // all words
 		["She's the teacher.", "她是老师。", ""],
 		["He's the student.", "他是学生。", ""],
 		["Welcome back!", "欢迎回来！", ""],
+		
+		["He finishes his work at five o'clock.", "他五点下班。", ""],
+		["He finishes class at five o'clock.", "他五点下课。", ""],
+		["His nationnality is Chinese", "他的国籍是中国。", ""],
 
 		// refer to https://wenku.baidu.com/view/8dfb48d577c66137ee06eff9aef8941ea76e4bb3.html (this is good)
 		["A:How do you do? B:How do you do?","A:你好吗？B:你好吗？","",""],
@@ -1117,6 +1134,9 @@ var words = { // all words
 		["Congratulations！","恭喜！",""],
 		["bad","坏的",""],
 		["welcome","欢迎；受欢迎的",""],
+		["beautiful","",""],
+		["pretty","坏的",""],
+		["nice","坏的",""],
 	],
 	
 };
