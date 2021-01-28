@@ -1135,8 +1135,8 @@ var words = { // all words
 		["bad","坏的",""],
 		["welcome","欢迎；受欢迎的",""],
 		["beautiful","",""],
-		["pretty","坏的",""],
-		["nice","坏的",""],
+		["pretty","",""],
+		["nice","",""],
 	],
 	
 };
