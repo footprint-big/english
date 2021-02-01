@@ -2,6 +2,21 @@
 
 var words = { // all words
 
+	"新": [
+		["occupation","职业","",""],
+		["receptionist","接待员","",""],
+		["pilot","飞行员","",""],
+		["mechanic","技工","",""],
+		["businessman","商人","",""],
+		
+		["famous","","著名的，有名的",""],
+		["well-known","知名的","",""],
+		
+		["railroad","铁路","",""],
+		["cellphone","手机","",""],
+		["sause","酱","",""],
+	],
+	
 	"上学前的忙碌-scene 2": [
 		["alarm","警报，警报器","[əˈlɑːrm]",""],
 		["clock","钟，时钟","[klɒk]",""],
@@ -99,7 +114,6 @@ var words = { // all words
 		["table","桌子","","广义的table包含desk"],
 
 		["dining table","餐桌","",""],
-		["school table","课桌","",""],
 		// ["dressing table","梳妆台","",""],
 		
 		// ["drawer","抽屉","",""],
