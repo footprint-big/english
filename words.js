@@ -2,6 +2,59 @@
 
 var words = { // all words
 
+	"已背": [
+		["exact","adj. 精确的;准确的;严谨的;严格的;","[ɪɡˈzækt]","exactly"],
+		["slow","adj. 缓慢的;迟缓的;耗时的;慢的;慢速的;低速的; v. (使)放慢速度，减缓，松劲","[sloʊ]","slowly, slowing, slowed, slowed"],
+		["few","det./adj. (与复数名词和复数动词连用)不多，很少;(与复数名词和复数动词连用)有些，几个; pron. 很少人(或事物、地方);有些(人、事物、地方);一些;不和…一般多;少于","[fjuː]","fewer, fewest"],
+		
+		["just","adv. 正好;恰好;正当…时;不少于;同样; adj. 公正的;正义的;正当的;合理的;正直的人;公正的人;合适的;恰当的","[dʒʌst]",""],
+		["across","adv. 从一边到另一边;横过;宽;从…的一边向…;在对面;在对过; prep. 从…一边到另一边;横过;在…对面;在…对过;在(身体某部位)上","[əˈkrɔːs]",""],
+				
+		["leave","v. 离开(某人或某处);离开居住地点(或群体、工作单位等);遗弃;丢弃","[liːv]","leaves, leaving, leaved, leaved"],
+		["believe","v.相信;认为真实;把(某事)当真;认为有可能;认定;看作","[bɪˈliːv]","believes, believing, believed, believed"],
+		["wish","v. 希望(不大可能的事)发生;怀着(不可能实现的)愿望;希望(做某事);想要(某事发生);盼望;企求;想要; n. 愿望;希望;想要的东西;希望的事;愿;心愿","[wɪʃ]","wishes, wishes, wishing, wished, wished"],
+		
+		["shell","n. (蛋、坚果、某些种子和某些动物的)壳;壳状物;炮弹","[ʃel]","shells"],
+		["turtle","n. 海龟;(任何种类的)龟;陆龟;水龟;鳖","[ˈtɜːrtl]","turtles"],
+		["town","n. 镇;市镇;集镇;(某一市镇的)居民，市民;(城镇的)商业区","[taʊn]","towns"],
+		["bridge","n. 桥;起联系作用的事物;桥梁;纽带;(舰船的)驾驶台;船桥;舰桥; v. 在…建桥，架桥于，跨过，度过","[brɪdʒ]"," bridges, bridges, bridging, bridged, bridged"],
+		["church","n. (基督教的)教堂，礼拜堂;礼拜;礼拜仪式;基督教教派","[tʃɜːrtʃ]","churches"],
+		["hotel","n. 旅馆;旅社;酒吧;酒馆;餐馆","[hoʊˈtel]","hotels"],
+		["supermarket","n. 超级市场;超市","[ˈsuːpərmɑːrkɪt]",""],
+		["gas","n. 气体;气体燃料;煤气;天然气;(外科手术用)麻醉气;汽油","[ɡæs]","gases"],
+		["gas station","加油站","",""],
+		["bakery","n. 面包(糕饼)店;面包(糕饼)烘房;面包厂","[ˈbeɪkəri]","bakeries"],
+		
+		["side","n. (由想象的中线分出的)一边，一侧;(事物左方或右方的) 一旁，一边;侧面","[saɪd]","sides"],
+		["river","n.河;江;(液体)涌流","[ˈrɪvər]","rivers"],
+		["balloon","n. 气球;热气球","[bəˈluːn]","balloons"],
+		["place","n. 位置;地点;场所;地方;城镇(或建筑物等);有某用途的建筑(或土地)；v. (小心或有意)放置，安放;使(人)处于某位置;安置;安顿;以某种态度对待(或看待)","[pleɪs]","places, places, placing, placed"],
+		
+		["other","adj./pron. 另外;其他;(指两个人或事物中的第二个)那个，另一个;(指一组中其余的人或事物)其余的，另外的","[ˈʌðər]","others"],
+		["another","det./pron. 又一;再一;另一(事物或人);另一;不同的(人或事物);类似的(人或事物)","[əˈnʌðər]",""],
+		["while","conj. 在…期间;当…的时候;与…同时;(对比两件事物)…而，…然而; n. 一段时间;一会儿","[waɪl]",""],
+		["learn","v. 学;学习;学到;学会;听到;得知;获悉;记住;背熟;熟记","[lɜːrn]","learns, learning, learnt/learned, learnt/learned"],
+		["forever","adv. 永远;长久地;(与动词进行时连用)老是，没完没了地","[fərˈevər]",""],
+		["bring","v. 带…到某处;带来;取来;提供;供给;导致;引起","[brɪŋ]","brings, bringing, brought, brought"],
+		["glad","adj. 高兴;愉快;感激;感谢;乐意;情愿;愿意; vt. 使高兴","[ɡlæd]","glads, gladding, gladded, gladded"],
+		["sometimes","adv. 有时;间或","[ˈsʌmtaɪmz]",""],
+		["nearly","adv. 几乎;差不多;将近","[ˈnɪrli]",""],
+		["care","n. 照料;照顾;照看;护理;小心;谨慎;忧虑;焦虑;引起烦恼的事;令人焦虑的事; v. 关注;在意;担忧;关心;关怀;努力做","[ker]","cares, caring, cared, cared"],
+		["take care of","处理;应对;照顾;照看;看护","",""],
+		["anyone","pron. 任何人;随便哪个人;重要人物","[ˈeniwʌn]",""],
+		["someone","pron. 某人;重要人物","[ˈsʌmwʌn]",""],
+		["title","n.名称，标题，题目;(书刊的)一种，一本;(人名前表示地位、职业、婚否等的)称号，头衔，职称，称谓; v. (给书籍、乐曲等)加标题，定题目","[ˈtaɪtl]","titles, titles, titling, titled, titled"],
+		["street","n. 大街;街道","[striːt]","streets"],
+		["around","adv. 大约;周围;四周;围绕;环绕; prep. 围绕;环绕;在那边;到那边;从那边;绕着","[əˈraʊnd]",""],
+		["even","adv. (强调出乎意料)甚至，连，即使;(用以加强比较)甚至更，愈加，还;(引出更精确的说法)甚至可以说，其实，实际上; adj. 平滑的;平的;平坦的;(数量、速度等)变化不大的，均匀的，平稳的;相等的;均等的; v. （使）平;（使）相等;（使）变平","[ˈiːvn]","evens, evening, evened, evened"],
+		["forget","v. 忘记;遗忘;忘记做(或带、买等);不再想;不再把…放在心上","[fərˈɡet]","forgets, forgetting, forgot, forgotten"],
+		["","","",""],
+		["","","",""],
+		["","","",""],
+		["","","",""],
+		["","","",""],
+	],
+
 	"新": [
 		["occupation","职业","",""],
 		["receptionist","接待员","",""],
@@ -9,12 +62,15 @@ var words = { // all words
 		["mechanic","技工","",""],
 		["businessman","商人","",""],
 		
-		["famous","","著名的，有名的",""],
+		["famous","著名的，有名的","",""],
 		["well-known","知名的","",""],
 		
 		["railroad","铁路","",""],
 		["cellphone","手机","",""],
 		["sause","酱","",""],
+		
+		["When will he become the manager?","他什么时候会成为经理？","",""],
+		["How long does it take to become a pilot?","成为飞行员花多久？","",""],
 	],
 	
 	"上学前的忙碌-scene 2": [
