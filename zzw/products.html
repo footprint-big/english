@@ -46,7 +46,7 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="products.html">产品列表</a></li>
-						<li><a href="carts.html">查看购物篮&nbsp;<span class="badge">0</span></a></li>
+						<li><a href="carts.html">查看购物篮&nbsp;<span id="prodCount" class="badge"></span></a></li>
 						<li><a href="contact-us.html">联系我们</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
@@ -59,11 +59,11 @@
 					<div class="thumbnail">
 						<img src="images/food-img.png" alt="手工蛋饺">
 						<div class="caption">
-							<h3>手工蛋饺</h3>
+							<h3>手工蛋饺 <small>60元/500克</small></h3>
 							<p><span class="label label-success">新品</span>  新鲜食材，纯手工制作。材料：精肉10g，食盐2g，...</p>
 							<p>
 								<a href="#" class="btn btn-primary" role="button">预定并付款</a>
-								<a href="#" class="btn btn-default" role="button">加入购物篮</a>
+								<a href="javascript:addToCart('zzw1', 1)" class="btn btn-default" role="button">加入购物篮</a>
 								<a href="#" class="btn btn-default" role="button">推荐菜谱</a>
 							</p>
 						</div>
@@ -75,11 +75,11 @@
 					<div class="thumbnail">
 						<img src="images/food-img.png" alt="手工糯米圆子">
 						<div class="caption">
-							<h3>手工糯米圆子</h3>
+							<h3>手工糯米圆子 <small>60元/500克</small></h3>
 							<p>新鲜食材，纯手工制作。材料：精肉10g，食盐2g，...</p>
 							<p>
 								<a href="#" class="btn btn-primary" role="button">预定并付款</a>
-								<a href="#" class="btn btn-default" role="button">加入购物篮</a>
+								<a href="javascript:addToCart('zzw2', 1)" class="btn btn-default" role="button">加入购物篮</a>
 								<a href="#" class="btn btn-default" role="button">推荐菜谱</a>
 							</p>
 						</div>
@@ -90,11 +90,11 @@
 					<div class="thumbnail">
 						<img src="images/food-img.png" alt="手工藕圆子">
 						<div class="caption">
-							<h3>手工藕圆子</h3>
+							<h3>手工藕圆子 <small>60元/500克</small></h3>
 							<p>新鲜食材，纯手工制作。材料：精肉10g，食盐2g，...</p>
 							<p>
 								<a href="#" class="btn btn-primary" role="button">预定并付款</a>
-								<a href="#" class="btn btn-default" role="button">加入购物篮</a>
+								<a href="javascript:addToCart('zzw3', 1)" class="btn btn-default" role="button">加入购物篮</a>
 								<a href="#" class="btn btn-default" role="button">推荐菜谱</a>
 							</p>
 						</div>
@@ -105,11 +105,11 @@
 					<div class="thumbnail">
 						<img src="images/food-img.png" alt="手工纯肉圆子">
 						<div class="caption">
-							<h3>手工纯肉圆子</h3>
+							<h3>手工纯肉圆子 <small>60元/500克</small></h3>
 							<p>新鲜食材，纯手工制作。材料：精肉10g，食盐2g，...</p>
 							<p>
 								<a href="#" class="btn btn-primary" role="button">预定并付款</a>
-								<a href="#" class="btn btn-default" role="button">加入购物篮</a>
+								<a href="javascript:addToCart('zzw4', 1)" class="btn btn-default" role="button">加入购物篮</a>
 								<a href="#" class="btn btn-default" role="button">推荐菜谱</a>
 							</p>
 						</div>
@@ -125,5 +125,6 @@
 		
 		<script src="js/jquery-3.4.1.min.js"></script>
 		<script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/zzw.js"></script>
 	</body>
 </html>

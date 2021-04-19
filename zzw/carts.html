@@ -46,7 +46,7 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a href="products.html">产品列表</a></li>
-						<li class="active"><a href="carts.html">查看购物篮&nbsp;<span class="badge">0</span></a></li>
+						<li><a href="carts.html">查看购物篮&nbsp;<span id="prodCount" class="badge"></span></a></li>
 						<li><a href="contact-us.html">联系我们</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
@@ -55,19 +55,19 @@
 		
 		<div id="container">
 			<div class="panel panel-default">
-			  <!-- Default panel contents -->
-			  <div class="panel-heading">甄真味购物篮</div>
-			  <div class="panel-body">
-				<p>选择健康.选择美味</p>
-			  </div>
-
-			  <!-- Table -->
-			  <table class="table">
-				<tr>
-				<tr>
-			  </table>
+			
+				<!-- Default panel contents -->
+				<div class="panel-heading">甄真味购物篮
+					<button type="button" class="btn btn-default navbar-btn" onclick="clearCart()">清空购物篮</button>
+				</div>
+				<div class="panel-body">
+					<p>选择健康.选择美味</p>
+				</div>
+				
+				<ul id="cart" class="list-group"></ul>
 			</div>
 		</div><!--end of id container -->
+		
 		<nav class="navbar navbar-default navbar-fixed-bottom">
 			<div class="container-fluid">
 				甄真味食品 版权所有 Copyright © 2021
@@ -76,5 +76,7 @@
 		
 		<script src="js/jquery-3.4.1.min.js"></script>
 		<script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/zzw.js"></script>
+		<script src="js/cart.js"></script>
 	</body>
 </html>
