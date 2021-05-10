@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>kt&kn计算器</title>
+
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+		<!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+		
+	</head>
+	<body>
+		cash<input id="cash" type="text" value="2646.42"><br>
+		
+		kn-p<input id="kn-p" type="text" value=0> <br>
+		kn-c<input id="kn-c" type="text" value="2000"><br> 
+		
+		<br>
+		=> kt价格<input id="kt-p" type="text" value=0>
+		
+		<input type=button onclick="calc()" value="calc">
+	</body>
+	
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+	
+	<script>
+		function calc() {
+			var knPrice = parseInt($("#kn-p").val());
+			var knCount = parseInt($("#kn-c").val());
+			var knAmount = knPrice * knCount;
+			
+			var cash = parseInt($("#cash").val());
+			
+			var totalAmount = knAmount + cash;
+			
+			var ktPrice = totalAmount / 500;
+			$("#kt-p").val(ktPrice);
+		}
+	</script>
+</html>
